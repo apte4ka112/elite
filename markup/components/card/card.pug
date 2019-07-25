@@ -1,0 +1,35 @@
+include ../button/button
+mixin card(params)
+    +b.card
+        +e.box
+            -
+                var classLabel = 'label';
+                if('label_mod' in params && params.label_mod.length) classLabel += '_'+params.label_mod;
+            if(params.label)
+                +e(class=classLabel)= params.label
+            if(params.bubbles)
+                .bubbles
+                    .bubbles--r
+                        .bubble.bubble_discount -10%
+            .card__view.c-ratio._ratio-10
+                
+                .bg.contain(style='background-image: url("static/img/assets/card/'+params.image+'")')
+            +e.info
+                if(params.code)
+                    +e.vendor-code= params.code
+                +e.A.title.link(href="#")= params.name
+                if (params.price)
+                    +e.price
+                        .product__info--price
+                            | от
+                            b=params.price
+                        .product__info--price_small.share
+                            | от  
+                            span=params.price
+                if (params.prices)
+                    +e.price=params.prices
+
+                +e.btn
+                    +button({text: 'Купить', type: 'primary', mod: 'card'})
+                if(params.availab)
+                    +e.availability В наличии

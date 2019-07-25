@@ -1,0 +1,19 @@
+mixin breadcrumbs(params)
+    -
+        var name_block = 'breadcrumbs',
+        currentClass = name_block;
+        if('mod' in params && params.mod.length) currentClass =  name_block+'_'+params.mod;
+        var quantity = params.elements.length;
+    +b.DIV(class= currentClass)
+        +e.OL.list(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+            each item, index in params.elements
+                if (index < quantity - 1)
+                    +e.LI.item(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+                        +e.A.link(href='javascript:void(0)', itemprop='item')
+                            +e.SPAN.text(itemprop='name')= item
+                        meta(itemprop='position', content= index + 1)
+                else
+                    +e.LI.item.active(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+                        +e.SPAN.link(itemprop='item')
+                            +e.STRONG.text(itemprop='name')= item
+                        meta(itemprop='position', content= index + 1)

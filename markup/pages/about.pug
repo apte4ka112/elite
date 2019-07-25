@@ -1,0 +1,105 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+include ../components/block-container/block-container
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/pagination/pagination
+include ../components/banner/banner
+include ../components/headline/headline.pug
+include ../components/filter-sidebar/filter-sidebar
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page
+        | %=symbols=%
+        +header()
+        .main
+            +b.section
+                +e.box
+                    +b.head-conent.inner
+                        +headline({text: 'О компании'})
+                            +breadcrumbs({elements: ['Главная', 'О компании']})
+                    +b.iner-content
+                        .block--item.grid.flex.item-2.tablet.plane
+                            .item
+                                +b.block.border
+                                    +e.wrap.smail
+                                        .text
+                                            p «Компания  "Elit" создана в 2007 году,  специализируясь на поставках и продаже итальянской мебели в России. Уделяя особое  внимание качеству продукции, разнообразию  товаров и хорошему сервису,  компания очень быстро превратилась в известный бренд  по поставке элитной мебели. Сегодня, мы  так же  активно  занимаемся продвижением нашего бренда,  развиваем партнерские отношения с  итальянскими производителями мебели, текстиля, освещения и других интерьерных решений.  Нашими партнерами являются  производители Италии, Испании, Португалии, Германии, Великобритании, каждый из которых по своему уникален по стилю и ассортименту. 
+                                            p    Используя комплексный подход к работе, уже в 2009 году компания "Elit" стала предлагать своим клиентам полный спектр услуг по заказу  предметов мебели и декорированию помещения. Для улучшения сервиса, в 2010 году была создана дизайн студия «Elit», которая стала работать  в партнерстве с  известными  дизайн-ателье  Москвы.  В нашем арсенале сотни реализованных проектов  и  тысячи  довольных клиентов, среди которых есть  частные компании,  крупнейшие банки, государственные организации, промышленные предприятия, известные всем люди. Все это - результат нашей слаженной работы  и гарантия качественного выполнения всех нашиз заказов.
+                            .block--image.item
+                                .c-ratio._ratio-10
+                                    .bg.cover(style="background-image: url(http://www.neo-mebel.ru/content/italy/ducale_laccato/gostinaia/big_file_model_533_1200max.jpg)")
+                        .marBot20px
+                        .block--item.grid.flex.item-2.tablet.plane
+                            .block--image.item
+                                .c-ratio._ratio-10
+                                    .bg.cover(style="background-image: url(http://www.neo-mebel.ru/content/italy/ducale_laccato/gostinaia/big_file_model_533_1200max.jpg)")
+                            .item
+                                +b.block.border
+                                    +e.wrap.smail
+                                        .text
+                                            p Уже с момента своего появления, компания «Elit»  выстраивает свою ценовую политику исходя из интернет-маркетинга, все наши цены конкурентноспособны и показаны в нашем интернет магазине.  Мы  ценим и уважаем всех наших клиентов, поэтому  по возможности идем на встречу каждому, даем дополнительные скидки или предлагаем бесплатный сервис.  
+                                            p В нашем интернет магазине представлено очень большое количество композиций и товаров от разных производителей.  Это  бескрайние возможности для комплектации интерьерных проектов или  жилых зон в различных  стилевых решениях.  У нас представлены красивые спальни и гостиные, детские комнаты и кабинеты, комплексные стенки и гардеробные комнаты, кухонные гарнитуры и удобные диваны, люстры и бра, текстильные декоры,  предметы дизайна и многое другое.. Наши специалисты всегда могут проконсультировать Вас и дополнительно, предложить что то новое.  Наша задача помочь Вам, посоветовать лучшее, создать пространство, в котором Вы будете окружены комфортом и красотой. 
+                                            p Приезжайте в наш уютный салон, звоните нашим менеджерам, знакомьтесь с нашим сайтам, пишите нам запросы и пожелания. Мы работаем для Вас !
+
+                        //- .block--item.marBot10px.reviews--form
+                        //-     .item
+                        //-         +b.block.border(style="background: rgba(67, 67, 67, 0.01);border-color: #ccc;border-width: 1px;")
+    
+                        //-             +e.wrap
+                        //-                 .title.toCenter.marBot20px РЕКВИЗИТЫ
+                        //-                 .ui.grid.noMargin
+                        //-                     .two.column.row
+                        //-                         .column
+                        //-                             .text
+                        //-                                 p 
+                        //-                                     b Наименование ООО ЙЖЖ  "Элит"
+                        //-                                 p
+                        //-                                     b ИНН/КПП: 
+                        //-                                     span 3059345023452
+                        //-                                 p
+                        //-                                     b ОГРН:
+                        //-                                     span 3059345023452
+                        //-                                 p
+                        //-                                     b ОКПО:
+                        //-                                     span 3059345023452
+                        //-                                 p
+                        //-                                     b ОКВЭД:
+                        //-                                     span 3059345023452
+                        //-                         .column
+                        //-                             .text
+                        //-                                 p 
+                        //-                                     b Юр. адрес:
+                        //-                                     span 3059345023452
+                        //-                                 p
+                        //-                                     b Р/с: 
+                        //-                                     span 3059345023452
+                        //-                                 p
+                        //-                                     b Банк:
+                        //-                                     span 3059345023452
+                        //-                                 p
+                        //-                                     b БИК:
+                        //-                                     span 3059345023452
+                        //-                                 p
+                        //-                                     b К/с:
+                        //-                                     span 3059345023452  
+                       
+
+
+
+
+                +footer({promo: false})
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -1,0 +1,222 @@
+.card {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: auto;
+  padding: 20px 11px;
+  cursor: pointer;
+  padding-top: 0;
+  transition: all .3s;
+}
+.card .bubbles {
+  top: 10px;
+  left: 10px;
+}
+.card .bubbles .bubble {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+}
+.card .product__info--price {
+  font-size: 16px;
+}
+.card .product__info--price b {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .card .product__info--price b {
+    font-size: 16px;
+  }
+}
+.card .product__info--price_small.share {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .card {
+    padding: 20px 7px;
+  }
+}
+.card:hover .card__box {
+  transition: all .3s;
+  box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.12) !important;
+}
+.card__box {
+  position: relative;
+  background: #F1F1F1;
+  border: 1px solid #DEDEDF;
+  border-radius: 4px;
+}
+.card__label {
+  top: 10px;
+  min-width: 100px;
+  right: -12px;
+  position: absolute;
+  transition: all .4s;
+  text-align: center;
+  display: inline-block;
+  z-index: 9;
+  font-size: 14px;
+  padding: 3px 10px;
+  border-bottom-left-radius: 4px;
+}
+.card__label:after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: 0;
+  display: block;
+  height: 12px;
+  width: 12px;
+  z-index: 1;
+}
+.card__label:before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: -12px;
+  display: block;
+  height: 0;
+  width: 0;
+  border: 12px solid transparent;
+  transform: rotate(-180deg);
+  z-index: -1;
+}
+.card__label_red {
+  background: #CC0000;
+  color: #fff;
+}
+.card__label_red:before {
+  border-right-color: #990000;
+}
+.card__label_red:after {
+  background: #CC0000;
+}
+.card__label_yellow {
+  background: #FF9900;
+  color: #fff;
+}
+.card__label_yellow:before {
+  border-right-color: #FF9900;
+}
+.card__label_yellow:after {
+  border-right-color: #FF9900;
+}
+.card__label_blue {
+  background: #3d5896;
+  color: #fff;
+}
+.card__label_blue:before {
+  border-right-color: #3d5896;
+}
+.card__label_blue:after {
+  border-right-color: #3d5896;
+}
+.card__label_red {
+  background: #CC0000;
+  color: #fff;
+}
+.card__label_yellow {
+  background: #FF9900;
+  color: #fff;
+}
+.card__label_blue {
+  background: #3d5896;
+  color: #fff;
+}
+.card__view {
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  display: block;
+  transition: all .3s;
+  height: 220px;
+}
+.card__view:hover {
+  opacity: .8;
+}
+.card__stars {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+  max-width: 100px;
+}
+.card__star {
+  width: 20px;
+  height: 20px;
+  background: url("../img/assets/card/star.svg") center / contain no-repeat;
+}
+.card__star_active {
+  background: url("../img/assets/card/star.svg") center / contain no-repeat;
+}
+.card__info {
+  padding: 10px 0 10px;
+  color: #434343;
+  text-align: center;
+}
+.card__vendor-code {
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+.card__vendor-code:hovers {
+  font-weight: bold;
+}
+.card__title {
+  line-height: 19px;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  height: 64px;
+  padding: 0 25px;
+  overflow: hidden;
+  display: block;
+}
+.card__title:hover {
+  color: #434343 !important;
+}
+.card__price {
+  margin-bottom: 14px;
+  font-size: 18px;
+  margin-bottom: 12px;
+  width: auto;
+  display: inline-block;
+  text-align: right;
+}
+.card__price .product__info--price b {
+  padding-right: 0;
+}
+.card__price .product__info--price_small.share {
+  text-align: right;
+  padding-right: 3px;
+}
+.card__btn {
+  margin-bottom: 0px;
+}
+.card__btn .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.card__availability {
+  font-size: 12px;
+  text-align: right;
+  margin-right: 15px;
+  line-height: 11px;
+  color: #000;
+}
+.card .c-ratio > .bg.contain {
+  background-size: cover !important;
+}
+.card__box:hover .bubbles {
+  opacity: 0.8;
+}
+.card__box:hover .card__view {
+  opacity: .8;
+}

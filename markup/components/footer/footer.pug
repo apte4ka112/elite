@@ -1,0 +1,972 @@
+include ../header-cart/header-cart
+mixin footer(params)
+    a(rel="scrolltop" href="#" )
+        svg(style="width:24px;height:24px" viewBox="0 0 24 24")
+            path(fill="#000000" d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z")
+    +b.footer
+        if(params.promo)
+            +b.promo-full_footer(style="background-image: url(/static/img/assets/promo-full/footer-2.jpg);" )
+                +e.box
+                    +e.center
+                        +e.title Вам НУЖНА ПОМОЩЬ В ВЫБОРЕ ?
+                        +e.description.
+                            Вы можете оставить заявку на сайте и наши специалисты свяжутся с Вами, и помогут решить все интересующие Вас вопросы. Заполните форму для обратной связи.
+                        +b.FORM.form_footer(data-form)
+                            +e.main
+                                +e.INPUT.input(name="name" val="" placeholder="Представьтесь пожалуйста")
+                                +e.INPUT.input(name="phone" val="" placeholder="Ваш номер телефона")
+                                +e.INPUT.input(name="email" val="" placeholder="Ваш адрес электронной почты")
+                                +e.check
+                                    input(type="hidden" name="requiredField" value="")
+                                    .ui.checkbox.checked
+                                        input.hidden(type='checkbox', tabindex='0' checked) 
+                                        label(for="agreement-2")!=(' Я согласен с обработкой моих персональных данных в соответствии с <a href="#" class="personal-date"> политикой конфиденциальности..</a>')
+                            +e.footer
+                                +button({text: 'Отправить',type: 'primary'})
+        +e.wrap
+            +e.content
+                +e.column
+                    +e.column-content
+                        +e.header КАТАЛОГ
+                        +e.list
+                            +e.A.list-item.link(href="#" target="_blank")  Мебель
+                            +e.A.list-item.link(href="#" target="_blank")  Акции и скидки
+                            +e.A.list-item.link(href="#" target="_blank")  Новинки
+                            +e.A.list-item.link(href="#" target="_blank")  Склад
+                            +e.A.list-item.link(href="#" target="_blank")  Хиты продаж
+                            +e.A.list-item.link(href="#" target="_blank")  Бренды
+                    +e.column-content
+                        +e.header КОМПАНИЯ
+                        +e.list
+                            +e.A.list-item.link(href="/about.html" )   О компании
+                            +e.A.list-item.link(href="#" target="_blank")  Наши сотрудники
+                            +e.A.list-item.link(href="#" target="_blank")  Наши проекты
+                            +e.A.list-item.link(href="#" target="_blank")  Фотогалерея
+                            +e.A.list-item.link(href="/contacts.html" )  Контакты
+                            +e.A.list-item.link(href="#" target="_blank")  Отзывы
+                    +e.column-content
+                        +e.header НАШИ УСЛУГИ
+                        +e.list
+                            +e.A.list-item.link(href="#" target="_blank")  Доставка по Москве
+                            +e.A.list-item.link(href="#" target="_blank")  Доставка по России
+                            +e.A.list-item.link(href="#" target="_blank")  Хранение
+                            +e.A.list-item.link(href="#" target="_blank")  Монтаж
+                            +e.A.list-item.link(href="#" target="_blank")  Реставрация
+                            +e.A.list-item.link(href="#" target="_blank")  Дизайн проект
+                    +e.column-content
+                        +e.header ИНФОРМАЦИЯ
+                        +e.list
+                            +e.A.list-item.link(href="#" target="_blank")  Оплата и цена
+                            +e.A.list-item.link(href="#" target="_blank")  Сотрудничество
+                            +e.A.list-item.link(href="#" target="_blank")  Новости
+                            +e.A.list-item.link(href="#" target="_blank")  Статьи
+                            +e.A.list-item.link(href="#" target="_blank")  Вакансии
+                            +e.A.list-item.link(href="#" target="_blank")  Карта сайта
+                +e.contacts
+                    +e.A.contacts--item(href="tel:84957839733")
+                        +b.icon._type_phone
+                        +e.contacts--text 8 (495) 783-97-33
+                    +e.A.contacts--item(href="tel:88005507877")
+                        +b.icon._type_home-phone
+                        +e.contacts--text 8 (800) 550-78-77
+                        +e.contacts--text-ghost Бесплатный звонок по РФ
+                    +e.A.contacts--item(href="/contacts.html").link
+                        <i class="map marker alternate icon"></i>
+                        +e.contacts--link Смотреть адреса на карте
+
+        +e.copyright
+            +e.copyright--wrap.__wrap
+                +e.copyright--text © ELIT - элитная мебель, 2007 - 2019
+                +e.social
+                    +b.social--text
+                        .footer__copyright--text Мы в социальных сетях:
+                    +b.social
+                        +e.A.item(href="#" target="_blank")
+                            +icon({mod: 'social-vk'})
+                        +e.A.item(href="#" target="_blank")
+                            +icon({mod: 'social-fb'})
+                        +e.A.item(href="#" target="_blank")
+                            +icon({mod: 'social-yt'})
+                        +e.A.item(href="#" target="_blank")
+                            +icon({mod: 'social-in'})
+        
+    +b.cart.popup.ui
+        +header-cart()
+        .bg--cart
+    
+    .ui.modal.modal_theme_order.loginModal
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 Вход в личный кабинет
+        +b.FORM(data-form).s-modal-form
+            .s-modal-form__input-box
+                input(type="text" name="name" placeholder="Email" required).field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="password" name="password" placeholder="Пароль" required).field.field.field_theme_default
+            .s-modal-form__input-box.half
+                a.link(href="#").recoverModalLink Забыли пароль?
+            .s-modal-form__input-box.half.end
+                a.link(href="#").regModalLink Регестрация
+            .sr-modal-form__button
+                +button({
+                    text: 'Войти',
+                    type: 'primary',
+                })
+    .ui.modal.modal_theme_order.regModal
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 Регистрация
+        +b.FORM(data-form).s-modal-form
+            .s-modal-form__input-box
+                input(type="text" name="name" placeholder="Ваше имя" required).field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text" name="phone" placeholder="Телефон" required).field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text" name="Email" placeholder="Email" required).field.field.field_theme_default
+            .sr-modal-form__agreement.ui.checkbox
+                input(type="checkbox" id="agreement-2" required="" checked) 
+                label(for="agreement-2")!=(' Я согласен с обработкой моих персональных данных в соответствии с <a href="#" class="personal-date"> политикой конфиденциальности.</a>')
+                
+            .sr-modal-form__button.done-reg-link
+                +button({
+                    text: 'зарегистрироваться',
+                    type: 'primary',
+                })
+
+    .ui.modal.modal_theme_order.done-reg
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 ПОЗДРАВЛЯЕМ!
+        .s-modal--text.s-modal-form
+            p Вы зарегистрированны в системе.  Для входа в личный кабинет введите пароль, который мы выслали на Ваш e-mail.
+        .sr-modal-form__button.loginModalLink
+                +button({
+                    text: 'перейти',
+                    type: 'primary',
+                })
+    .ui.modal.modal_theme_default.modal-phone
+        i.modal__close.close
+        +b.phone
+            +b.mobile-phones
+                +b.mobile-phone
+                    +e.icon
+                    +e.A.text(href="tel:84957839733") 8 (495) 783-97-33
+                +b.mobile-phone
+                    +e.icon
+                    +e.A.text(href="tel:88005507877") 8 (499) 397-78-77
+                +b.mobile-phone
+                    +e.icon
+                    +e.A.text(href="tel:89255420141") 8 (925) 542-01-41
+                +b.mobile-phone
+                    +e.icon
+                    +e.A.text(href="tel:88005507877") 8 (800) 550-78-77
+                        +e.description Бесплатный звонок по РФ
+    .ui.modal.modal_theme_order.recoverModal
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 ВОСТАНОВЛЕНИЕ ПАРОЛЯ
+        +b.FORM(data-form).s-modal-form
+            .s-modal-form__input-box
+                input(type="text" name="name" placeholder="Email" required).field.field.field_theme_default
+            .sr-modal-form__agreement.ui.checkbox
+                span(for="agreement-2")!=(' Для восстановления пароля <br>введите e-mail,  указанный Вами при регистрации и нажмите кнопку "Отправить"')
+                
+            .sr-modal-form__button
+                +button({
+                    text: 'Отправить',
+                    type: 'primary',
+                })
+
+    .ui.modal.modal_theme_default.modal-card
+        +header-cart()
+    .ui.modal.modal_theme_default.modal-card.modal-description
+        +b.description
+                i.modal__close.close
+                .description__head
+                    .description__name Кровати фабрики longhi
+                    .description__header
+                        .description__text Модель: 139-449
+                .description__main
+                    .description__item
+                        .description__header
+                            .description__title Композиция:
+                            .description__text 139-449
+                    .description__item
+                        .description__header
+                            .description__title Фабрика:
+                            .description__text Longhi
+                    .description__item
+                        .description__header
+                            .description__title Старана:
+                            .description__text Италия
+                    .description__item
+                        .description__header
+                            .description__title Стиль:
+                            .description__text Современный, Неоклассика
+                    .description__item
+                        .description__header
+                            .description__title Артикул:
+                            .description__text -
+                    .description__item
+                        .description__header
+                            .description__title Размер:
+                            .description__text L:225/204/164 P:240 H:142
+                    .description__item
+                        .description__header
+                            .description__title Товар:
+                            .description__text Под заказ
+                    .description__price
+                        .description__item
+                            .description__header
+                                .description__title Стоимоcть:
+                                .description__text По запросу
+                        .description__item
+                            .description__header
+                                .description__text.smail  Отображать цены
+                                .description__text 
+                                    +b.course.product__info--course
+                                        +e.item.active
+                                            i.ruble.icon
+                                        +e.item
+                                            i.euro.icon
+                                        +e.item
+                                            i.dollar.icon
+                    .description__header.no-flex.photo
+                        .description__title Дополнительные фото:
+                        .description__image--wrap
+                            .description__image
+                                .c-ratio._ratio-10
+                                    .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                            .description__image
+                                .c-ratio._ratio-10
+                                    .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                            .description__image
+                                .c-ratio._ratio-10
+                                    .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+               
+    .ui.modal.modal_theme_default.modal-menu
+        i.modal__close.close
+        .modal__item.title Каталог
+        .modal__list.modal__list-catalog
+            a.modal__item(href="#")
+                span Гостиные
+            a.modal__item(href="#")
+                span Спальни
+            a.modal__item(href="#")
+                span Мягкая Мебель
+            a.modal__item(href="#")
+                span Кухни
+            a.modal__item(href="#")
+                span Детская Мебель
+            a.modal__item(href="#")
+                span Предметы Интерьера
+            a.modal__item(href="#")
+                span Офисная Мебель
+            a.modal__item(href="#")
+                span Кабинеты
+            a.modal__item(href="#")
+                span Проектная Мебель
+            a.modal__item(href="#")
+                span Ванные Комнаты
+            a.modal__item(href="#")
+                span Межкомнатные Двери
+            a.modal__item(href="#")
+                span Прихожие
+            a.modal__item(href="#")
+                span Стенки ТВ И Стеллажи
+            a.modal__item(href="#")
+                span Столы И Стулья
+            a.modal__item(href="#")
+                span Шкафы И Гардеробы
+
+        a.modal__item(href="#")
+            span Товар в наличии
+        a.modal__item(href="#")
+            span Акции и скидки
+        a.modal__item(href="#")
+            span Фабрики
+        a.modal__item(href="#")
+            span О компании
+        a.modal__item(href="#")
+            span Доставка и оплата
+        a.modal__item(href="#")
+            span Как заказать
+        a.modal__item(href="#")
+            span Контакты 
+    .ui.modal.modal_theme_order.promo-offer-popup
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 После отправки запроса с Вами свяжется наш менеджер
+        +b.FORM(data-form).s-modal-form
+            .s-modal-form__input-box
+                input(type="text" name="name" placeholder="ФИО" ).field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text" name="phone" placeholder="Телефон").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text" placeholder="Город").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="email" name="email" placeholder="E-mail").field.field.field_theme_default
+            .s-modal-form__input-box
+                .ui.dropdown.selection(tabindex='0')
+                    select(name='design-presence')
+                        option(disabled='' selected='')
+                        option(value='1') Есть готовый проект
+                        option(value='2') Проект выполнен частично
+                        option(value='3') Нужен дизайн проект
+                        option(value='3') Нужна только подборка
+                    i.dropdown.icon
+                    .text Наличие дизайн проекта
+                    .menu.transition.hidden(tabindex='-1')
+                        .item(data-value='1') Есть готовый проект
+                        .item(data-value='2') Проект выполнен частично
+                        .item(data-value='3') Нужен дизайн проект
+                        .item(data-value='4') Нужна только подборка
+            .s-modal-form__input-box
+                .ui.dropdown.selection(tabindex='0')
+                    selecte(name='design-two')
+                        option(disabled='' selected='')
+                        option(value='1') 1
+                        option(value='2') 2
+                        option(value='3') 3
+                    i.dropdown.icon
+                    .text Стиль проекта
+                    .menu.transition.hidden(tabindex='-1')
+                        .item(data-value='1') 1
+                        .item(data-value='2') 2
+                        .item(data-value='2') 3
+            .s-modal-form__input-box.textarea
+                textarea(name="", cols="30", rows="10" placeholder="Коментарий").field.field_theme_default
+            .s-modal-form__input-box.sr-modal-form__upload
+                label
+                    i
+                        svg(width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M5.84912 0.575439V12.2739M-0.000120733 6.42468L11.6984 6.42468" stroke="#414141" stroke-width="2")
+
+                    span Прикрепить файлы
+                    input(type="file")
+            .sr-modal-form__agreement.ui.checkbox
+                input(type="checkbox" id="agreement-2" checked required="")
+                label(for="agreement-2")!=(' Я согласен с обработкой моих персональных данных в соответствии с <a href="#" class="personal-date"> политикой конфиденциальности.</a>')
+            .sr-modal-form__button
+                +button({
+                    text: 'ОТПРАВИТЬ ЗАПРОС',
+                    type: 'primary',
+                })
+    .ui.modal.modal_theme_order.VacanciesPopup
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 откликнуться на вакансию
+        +b.FORM(data-form).s-modal-form
+            .s-modal-form__input-box.textarea
+                textarea(name="", cols="30", rows="10" placeholder="Коментарий").field.field_theme_default
+            .s-modal-form__input-box.sr-modal-form__upload
+                label
+                    i
+                        svg(width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M5.84912 0.575439V12.2739M-0.000120733 6.42468L11.6984 6.42468" stroke="#414141" stroke-width="2")
+
+                    span Прикрепить файлы
+                    input(type="file")
+            .sr-modal-form__button
+                +button({
+                    text: 'ОТПРАВИТЬ ЗАПРОС',
+                    type: 'primary',
+                })
+    .ui.modal.modal_theme_order.feedback--popup
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 Здесь Вы можете написать отзыв о коллекции или товаре который Вам понравился.
+        +b.FORM(data-form).s-modal-form
+            .s-modal-form__input-box
+                input(type="text" name="name" placeholder="ФИО").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text"  name="phone" placeholder="Телефон").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text"  placeholder="Город").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="email" name="email" placeholder="E-mail").field.field.field_theme_default
+
+           
+            .s-modal-form__input-box
+                textarea(name="", cols="30", rows="10" placeholder="Введите текст").field.field_theme_default
+            .s-modal-form__rating
+                .s-modal-form__input-box 
+                    label Оцените товар
+                    +b.rating.product__info--rating
+                        +e.star.active
+                        +e.star.active
+                        +e.star.active
+                        +e.star
+                        +e.star
+            .sr-modal-form__agreement.ui.checkbox
+                input(type="checkbox" id="agreement-2" required="" checked) 
+                label(for="agreement-2")!=(' Я согласен с обработкой моих персональных данных в соответствии с <a href="#" class="personal-date"> политикой конфиденциальности.</a>')
+                
+            .sr-modal-form__button
+                +button({
+                    text: 'оставить отзыв',
+                    type: 'primary',
+                })
+    .ui.modal.modal_theme_order.request--popup
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 После отправки запроса с Вами свяжется наш менеджер
+        +b.FORM(data-form).s-modal-form
+            .s-modal-form__input-box
+                input(type="text"  name="name" placeholder="ФИО").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text"  name="phone" placeholder="Телефон").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text"  placeholder="Город").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="email" name="email" placeholder="E-mail").field.field.field_theme_default
+            .s-modal-form__input-box
+                textarea(name="", cols="30", rows="10"  placeholder="Коментарий").field.field_theme_default
+            .composition
+                a.composition__image(href="#")
+                    .c-ratio._ratio-10
+                        .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                .composition__main
+                    .composition__prev
+                        a.composition__name(href="#") Мягкая мебель Gordon Мягкая мебель Gordon Мягкая мебель Gordon
+                    .composition__cell
+                        .composition__header
+                            .composition__title Коллекция
+                            .composition__text 102-183
+                    .composition__cell
+                        .composition__header
+                            .composition__title Товар
+                            .composition__text в наличии
+                    .composition__cell
+                        .composition__header
+                            .composition__title Стоимость:
+                                .composition__price
+                                    .price от 12 000 ₽
+                                    .text.s-18 от 262 475 ₽
+
+                            
+            .sr-modal-form__agreement.ui.checkbox
+                input(type="checkbox" id="agreement-2" required="" checked)
+                label(for="agreement-2")!=(' Я согласен с обработкой моих персональных данных в соответствии с <a href="#" class="personal-date"> политикой конфиденциальности.</a>')
+            .sr-modal-form__button
+                +button({
+                    text: 'ОТПРАВИТЬ ЗАПРОС',
+                    type: 'primary',
+                })
+                
+    .ui.modal.modal_theme_order.tovar--popup
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 После отправки запроса с Вами свяжется наш менеджер
+        +b.FORM(data-form).s-modal-form
+            .s-modal-form__input-box
+                input(type="text" name="name" placeholder="ФИО").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text" name="phone" placeholder="Телефон").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text"  placeholder="Город").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="email"  name="email" placeholder="E-mail").field.field.field_theme_default
+            .s-modal-form__input-box
+                textarea(name="", cols="30", rows="10"  placeholder="Коментарий").field.field_theme_default
+            .composition
+                a.composition__image(href="#")
+                    .c-ratio._ratio-10
+                        .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                .composition__main
+                    .composition__prev
+                        a.composition__name(href="#") Кровать Indigo отделка местн ...
+                        .composition__header
+                            .composition__title Артикул:
+                            .composition__text 113-223
+                    .composition__cell
+                        .composition__header
+                            .composition__title Модель:
+                            .composition__text 113-223
+                    .composition__cell
+                        .composition__header
+                            .composition__title Кол:
+                            <div class="quantity"><input type="button" value="-" class="minus" field="quantity"><input type="text" name="quantity" value="1" class="qty"><input type="button" value="+" class="plus" field="quantity"></div>
+            
+                    .composition__cell
+                        .composition__header
+                            .composition__title Стоимость:
+                                .composition__price
+                                    .price от 12 000 ₽
+                                    .text.s-18 от 262 475 ₽
+
+                        
+            .sr-modal-form__agreement.ui.checkbox
+                input(type="checkbox" id="agreement-2" required="" checked)
+                label(for="agreement-2")!=(' Я согласен с обработкой моих персональных данных в соответствии с <a href="#" class="personal-date"> политикой конфиденциальности.</a>')
+            .sr-modal-form__button
+                +button({
+                    text: 'ОТПРАВИТЬ ЗАПРОС',
+                    type: 'primary',
+                })
+    .ui.modal.modal_theme_order.composition--modal
+        .modal__header
+            .modal__title Состав комплекта
+            i.modal__close.close
+        .modal__content
+            .level-one
+                .title-level Выбранные товары
+                .composition
+                    .composition__check
+                        .composition__close
+                            svg(width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M1 1L11.5 11.5M1 11.5L11.5 1" stroke="#414141")
+                    a.composition__image(href="#")
+                        .c-ratio._ratio-10
+                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                    .composition__main
+                        .composition__prev
+                            
+                            a.composition__name(href="#") Кровать Indigo отделка местн ...
+                            .composition__header
+                                .composition__title Артикул:
+                                .composition__text 113-223
+                            .composition__header
+                                .composition__title Размеры:
+                                .composition__text 1000x1000x10000
+                        .composition__cell
+                            .composition__header
+                                .composition__title Кол:
+                                .composition__text 1 шт.
+                        .composition__cell
+                            .composition__header
+                                .composition__title Модель:
+                                .composition__text 113-223
+                        .composition__cell
+                            .composition__header
+                                .composition__title Стоимость:
+                                    .composition__price
+                                        .price от 12 000 ₽
+                                        .text.s-18 от 262 475 ₽
+                .composition
+                    .composition__check
+                        .composition__close
+                            svg(width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M1 1L11.5 11.5M1 11.5L11.5 1" stroke="#414141")
+                    a.composition__image(href="#")
+                        .c-ratio._ratio-10
+                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                    .composition__main
+                        .composition__prev
+                            
+                            a.composition__name(href="#") Кровать Indigo отделка местн ...
+                            .composition__header
+                                .composition__title Артикул:
+                                .composition__text 113-223
+                            
+                            .composition__header
+                                .composition__title Размеры:
+                                .composition__text 1000x1000x10000
+                        .composition__cell
+                            .composition__header
+                                .composition__title Модель:
+                                .composition__text 113-223
+                        .composition__cell
+                            .composition__header
+                                .composition__title Кол:
+                                .composition__text 1 шт.
+                       
+                        .composition__cell
+                            .composition__header
+                                .composition__title Стоимость:
+                                    .composition__price
+                                        .price от 12 000 ₽
+                                        .text.s-18 от 262 475 ₽
+                .composition
+                    .composition__check
+                        .composition__close
+                            svg(width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M1 1L11.5 11.5M1 11.5L11.5 1" stroke="#414141")
+                    a.composition__image(href="#")
+                        .c-ratio._ratio-10
+                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                    .composition__main
+                        .composition__prev
+                            
+                            a.composition__name(href="#") Кровать Indigo отделка местн ...
+                            .composition__header
+                                .composition__title Артикул:
+                                .composition__text 113-223
+                            .composition__header
+                                .composition__title Размеры:
+                                .composition__text 1000x1000x10000
+                        .composition__cell
+                            .composition__header
+                                .composition__title Модель:
+                                .composition__text 113-223
+                        .composition__cell
+                            .composition__header
+                                .composition__title Кол:
+                                .composition__text 1 шт.
+                       
+                        .composition__cell
+                            .composition__header
+                                .composition__title Стоимость:
+                                    .composition__price
+                                        .price от 12 000 ₽
+                                        .text.s-18 от 262 475 ₽
+                .composition
+                    .composition__check
+                        .composition__close
+                            svg(width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M1 1L11.5 11.5M1 11.5L11.5 1" stroke="#414141")
+                    a.composition__image(href="#")
+                        .c-ratio._ratio-10
+                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                    .composition__main
+                        .composition__prev
+                            
+                            a.composition__name(href="#") Кровать Indigo отделка местн ...
+                            .composition__header
+                                .composition__title Артикул:
+                                .composition__text 113-223
+                            .composition__header
+                                .composition__title Размеры:
+                                .composition__text 1000x1000x10000
+                        .composition__cell
+                            .composition__header
+                                .composition__title Модель:
+                                .composition__text 113-223
+                        .composition__cell
+                            .composition__header
+                                .composition__title Кол:
+                                .composition__text 1 шт.
+                        .composition__cell
+                            .composition__header
+                                .composition__title Стоимость:
+                                    .composition__price
+                                        .price от 12 000 ₽
+                                        .text.s-18 от 262 475 ₽
+                .composition
+                    .composition__check
+                        .composition__close
+                            svg(width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M1 1L11.5 11.5M1 11.5L11.5 1" stroke="#414141")
+                    a.composition__image(href="#")
+                        .c-ratio._ratio-10
+                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                    .composition__main
+                        .composition__prev
+                            
+                            a.composition__name(href="#") Кровать Indigo отделка местн ...
+                            .composition__header
+                                .composition__title Артикул:
+                                .composition__text 113-223
+                            .composition__header
+                                .composition__title Размеры:
+                                .composition__text 1000x1000x10000
+                        .composition__cell
+                            .composition__header
+                                .composition__title Модель:
+                                .composition__text 113-223
+                        .composition__cell
+                            .composition__header
+                                .composition__title Кол:
+                                .composition__text 1 шт.
+        
+                        .composition__cell
+                            .composition__header
+                                .composition__title Стоимость:
+                                    .composition__price
+                                        .price от 12 000 ₽
+                                        .text.s-18 от 262 475 ₽
+            .level-two
+                .title-level Весь список товаров
+                .composition._green
+                    .composition__check
+                        .ui.checkbox
+                            input(type="checkbox" id="agreement-2" required="" tabindex="0" class="hidden")
+                    a.composition__image(href="#")
+                        .c-ratio._ratio-10
+                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                    .composition__main
+                        .composition__prev
+                            
+                            a.composition__name(href="#") Кровать Indigo отделка местн ...
+                            .composition__header
+                                .composition__title Артикул:
+                                .composition__text 113-223
+                            .composition__header
+                                .composition__title Размер:
+                                .composition__text 10000-10000
+                        .composition__cell
+                            .composition__header
+                                .composition__title Модель:
+                                .composition__text 113-223
+                        .composition__cell
+                            .composition__header
+                                .composition__title Кол:
+                                <div class="quantity"><input type="button" value="-" class="minus" field="quantity"><input type="text" name="quantity" value="1" class="qty"><input type="button" value="+" class="plus" field="quantity"></div>
+                        .composition__cell
+                            .composition__header
+                                .composition__title Стоимость:
+                                    .composition__price
+                                        .price от 12 000 ₽
+                                        .text.s-18 от 262 475 ₽
+        .modal__footer
+            .modal__footer-content
+                .modal__footer-cell.edit
+                    +button({
+                        text: 'Изменить состав комплекта',
+                        type: 'primary',
+                        link: '#'
+                    })
+                .modal__footer-cell.course--info
+                    .product__info--head!=('Отображать <br> цены')
+                    .product__info--content
+                        +b.course.product__info--course
+                            +e.item.active
+                                i.ruble.icon
+                            +e.item
+                                i.euro.icon
+                            +e.item
+                                i.dollar.icon
+                        
+                .modal__footer-cell
+                    .price
+                        .product__info--head итого: 
+                        .product__info--content
+                            .product__info--price
+                                b от 25 854 ₽
+                                .text.s-18 от 262 475 ₽
+            .modal__button.request--link
+                +button({
+                    text: 'отправить запрос',
+                    type: 'primary',
+                    link: '#'
+                })
+                +button({
+                    text: 'в корзину',
+                    type: 'primary',
+                    link: '#'
+                })
+    .ui.modal.modal_theme_order.product__share--popup
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 Поделиться
+        .s-modal-form
+            .social-link
+                a.icon.vk(href="#")
+                a.icon.fb(href="#")
+                a.icon.tw(href="#")
+                a.icon.in(href="#")
+                a.icon.wa(href="#")
+                a.icon.tel(href="#")
+                a.icon.vb(href="#")
+                a.icon.sms(href="#")
+            .social-input
+                .social-input--filed
+                    input(type="text" value="https://twitter.com/intent/tweet?text=http://devdel.kirkesok.no/api/kirke/182800101" id="myInput").field.field.field_theme_default
+                button(onclick="copyText()").button.button_type_primary.button_copy Копировать ссылку
+
+    .ui.modal.modal_theme_order.promo-order-popup 
+        i.modal__close.close
+        .s-modal--header
+            .s-modal--title.s-18 После отправки запроса с Вами свяжется наш менеджер
+        +b.FORM(data-form).s-modal-form
+            .s-modal-form__input-box
+                input(type="text" name="name" placeholder="ФИО").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text" name="phone"  placeholder="Телефон").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="text" placeholder="Город").field.field.field_theme_default
+            .s-modal-form__input-box
+                input(type="email" name="email" placeholder="E-mail").field.field.field_theme_default
+            .s-modal-form__input-box
+                label 
+                input(type="email" placeholder="Название композиции").field.field.field_theme_default
+            .s-modal-form__input-box
+                label 
+                input(type="email" placeholder="Название бренда").field.field.field_theme_default
+            .s-modal-form__input-box.textarea
+                textarea(name="", cols="30", placeholder="Коментарий" rows="10").field.field_theme_default
+            .s-modal-form__input-box.sr-modal-form__upload
+                label
+                    i
+                        svg(width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M5.84912 0.575439V12.2739M-0.000120733 6.42468L11.6984 6.42468" stroke="#414141" stroke-width="2")
+
+                    span Прикрепить файлы
+                    input(type="file")
+                .fille
+                    .fille__image
+                        <img src="//yastatic.net/mail/_/50b19213ee10e722bd0f0dfe6b45abfb-b-mail-icon_doc-48.png" class="b-file__icon b-mail-icon b-mail-icon_doc-48">
+                .fille
+                    .fille__image
+                        <img src="https://webattach.mail.yandex.net/message_part_real/e3317a6f3d6cf9428a214c5fe8ef3bd9.jpg?no_disposition=y&thumb=y&name=e3317a6f3d6cf9428a214c5fe8ef3bd9.jpg&sid=AEBPIJ*uGzRQTAmr8H%2F6cOEYjudlRvpofVSSMkxQgKn23oNF4T6HwY2%2FgsG7JYG7l2B*dPIJCnJnyQz7rw*%2FCBQ5Zrn80tazu8qrncVm*xTMlh5m86xqXlJ8IbE*w7qLPJXM9aDSmuQ%3D" class="b-file__icon b-mail-icon b-mail-icon_doc-48">
+            .sr-modal-form__agreement.ui.checkbox.checked
+                input(type="checkbox" id="agreement-2" checked required="" )
+                label(for="agreement-2")!=(' Я согласен с обработкой моих персональных данных в соответствии с <a href="#" class="personal-date"> политикой конфиденциальности.</a>')
+            .sr-modal-form__button
+                +button({
+                    text: 'ОТПРАВИТЬ ЗАПРОС',
+                    type: 'primary',
+                })
+        .ui.modal.modal_theme_order.promo-pers
+            .modal__header
+                .modal__title Политика конфиденциальности персональных данных
+                i.modal__close
+            .modal__content 
+                <div class="row mb-4">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            </p><h5 id="list-1">1. Общие положения</h5>
+                        <span>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных ООО «Элит-Мебель» (далее – Оператор).</span>
+                            <ol>
+                                <li>Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</li>
+                                <li>Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта http://elite-moscow.ru.</li>
+                            </ol>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            </p><h5 id="list-2">2. Основные понятия, используемые в Политике</h5>
+                            <ol>
+                                <li>Автоматизированная обработка персональных данных – обработка персональных данных с помощью средств вычислительной техники;</li>
+                                <li>Блокирование персональных данных – временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных);</li>
+                                <li>Веб-сайт – совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу http://elite-moscow.ru;</li>
+                                <li>Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных, и обеспечивающих их обработку информационных технологий и технических средств;</li>
+                                <li>Обезличивание персональных данных — действия, в результате которых невозможно определить без использования дополнительной информации принадлежность персональных данных конкретному Пользователю или иному субъекту персональных данных;</li>
+                                <li>Обработка персональных данных – любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных;
+                                </li>
+                                <li>Оператор – государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и (или) осуществляющие обработку персональных данных, а также определяющие цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными;
+                                </li>
+                                <li>Персональные данные – любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта http://elite-moscow.ru;</li>
+                                <li>Пользователь – любой посетитель веб-сайта http://elite-moscow.ru;</li>
+                                <li>Предоставление персональных данных – действия, направленные на раскрытие персональных данных определенному лицу или определенному кругу лиц;</li>
+                                <li>Распространение персональных данных – любые действия, направленные на раскрытие персональных данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование персональных данных в средствах массовой информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо иным способом;</li>
+                                <li>Трансграничная передача персональных данных – передача персональных данных на территорию иностранного государства органу власти иностранного государства, иностранному физическому или иностранному юридическому лицу;</li>
+                                <li>Уничтожение персональных данных – любые действия, в результате которых персональные данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных данных в информационной системе персональных данных и (или) результате которых уничтожаются материальные носители персональных данных.
+                                </li>
+                            </ol>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            </p><h5 id="list-3">3. Оператор может обрабатывать следующие персональные данные Пользователя</h5>
+                        <ol for="dataTargetResult"><li><mark>Фамилия, имя, отчество;</li><li><mark>Электронный адрес;</li>
+                                <li><mark>Номера телефонов;</li>
+                                <li><mark>Год, месяц, дата и место рождения;</li>
+                                <li><mark>Фотографии;</li>
+                                <li>Также на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов «cookie») с помощью сервисов интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).</li>              <li>Вышеперечисленные данные далее по тексту Политики объединены общим понятием Персональные данные.</li></ol>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            </p><h5 id="list-4">4. Цели обработки персональных данных</h5>
+                            <ol>
+                                <li>Цель обработки персональных данных Пользователя — информирование Пользователя посредством отправки электронных писем; заключение, исполнение и прекращение гражданско-правовых договоров; предоставление доступа Пользователю к сервисам, информации и/или материалам, содержащимся на веб-сайте.</li>
+                                <li>Также Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах, специальных предложениях и различных событиях. Пользователь всегда может отказаться от получения информационных сообщений, направив Оператору письмо на адрес электронной почты legomebel@yandex.ru с пометкой «Отказ от уведомлениях о новых продуктах и услугах и специальных предложениях».</li>
+                                <li>Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, служат для сбора информации о действиях Пользователей на сайте, улучшения качества сайта и его содержания.</li>
+                            </ol>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            </p><h5 id="list-5">5. Правовые основания обработки персональных данных</h5>
+                            <ol>
+                                <li>Оператор обрабатывает персональные данные Пользователя только в случае их заполнения и/или отправки Пользователем самостоятельно через специальные формы, расположенные на сайте http://elite-moscow.ru. Заполняя соответствующие формы и/или отправляя свои персональные данные Оператору, Пользователь выражает свое согласие с данной Политикой.</li>
+                                <li>Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в настройках браузера Пользователя (включено сохранение файлов «cookie» и использование технологии JavaScript).</li>
+                            </ol>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            </p><h5 id="list-6">6. Порядок сбора, хранения, передачи и других видов обработки персональных данных</h5>
+                        <span>Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается путем реализации правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований действующего законодательства в области защиты персональных данных.
+                            </span>
+                            <ol>
+                                <li>Оператор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ к персональным данным неуполномоченных лиц.</li>
+                                <li>Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства.</li>
+                                <li>В случае выявления неточностей в персональных данных, Пользователь может актуализировать их самостоятельно, путем направления Оператору уведомление на адрес электронной почты Оператора legomebel@yandex.ru с пометкой «Актуализация персональных данных».
+                                </li>
+                                <li>Срок обработки персональных данных является неограниченным. Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив Оператору уведомление посредством электронной почты на электронный адрес Оператора legomebel@yandex.ru с пометкой «Отзыв согласия на обработку персональных данных».
+                                </li>
+                            </ol>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            </p><h5 id="list-7">7. Трансграничная передача персональных данных</h5>
+                            <ol>
+                                <li>Оператор до начала осуществления трансграничной передачи персональных данных обязан убедиться в том, что иностранным государством, на территорию которого предполагается осуществлять передачу персональных данных, обеспечивается надежная защита прав субъектов персональных данных.
+                                </li>
+                                <li>Трансграничная передача персональных данных на территории иностранных государств, не отвечающих вышеуказанным требованиям, может осуществляться только в случае наличия согласия в письменной форме субъекта персональных данных на трансграничную передачу его персональных данных и/или исполнения договора, стороной которого является субъект персональных данных.
+                                </li>
+                            </ol>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            </p><h5 id="list-8">8. Заключительные положения</h5>
+                            <ol>
+                                <li>Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты legomebel@yandex.ru.
+                                </li>
+                                <li>В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.
+                                </li>
+                                <li>Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу http://elite-moscow.ru.</li>
+                            </ol>
+                    </div>
+                </div>
+        .ui.modal.modal_theme_order.modalSearch
+            i.modal__close.close
+            .modal__content
+                .block.s-modal-form
+                    .block__wrap(style="padding-top: 0")
+                        <form  action="/catalog/search/">
+                            <div class="search-item">
+                                <input class="search__input" type="search" name="q" value="" placeholder="поиск товаров" >
+                                <button class="search-item--close" type="submit">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path style="fill:#DEDEDF;     opacity: 0.7;" d="M17.7263 16.3951L13.289 11.9395C14.4299 10.6301 15.055 8.98262 15.055 7.26749C15.055 3.26026 11.6781 0 7.52752 0C3.37691 0 0 3.26026 0 7.26749C0 11.2747 3.37691 14.535 7.52752 14.535C9.08571 14.535 10.5706 14.0812 11.8401 13.2199L16.3111 17.7093C16.498 17.8967 16.7494 18 17.0187 18C17.2737 18 17.5156 17.9062 17.6992 17.7355C18.0893 17.3731 18.1017 16.7721 17.7263 16.3951ZM7.52752 1.89587C10.5955 1.89587 13.0913 4.30552 13.0913 7.26749C13.0913 10.2295 10.5955 12.6391 7.52752 12.6391C4.45956 12.6391 1.9637 10.2295 1.9637 7.26749C1.9637 4.30552 4.45956 1.89587 7.52752 1.89587Z" fill="#434343"></path></svg>
+                                </button>
+                            </div>
+                            .header-cart__bottom
+                                <button class="button button_type_primary button_mod_header-cart " style=" margin: auto;display: block;width: auto;padding: 0 30px;display: block;"><span class="button__text">Поиск</span>                       
+                        </form>
+        
+        .ui.modal.modal_theme_order.modalBasket
+            i.modal__close.closes
+            .modal__content
+                +header-cart()
+        .ui.modal.modal_theme_order.modal--req
+            i.modal__close.close
+            .modal__content
+                .block
+                    .block__wrap
+
+                        p.text 
+                            b Наименование организации:
+                            span   ООО «Элит-Мебель»
+                        p.text 
+                            b Юридический адрес:  
+                            span 119618, г. Москва, ул. Главмосстроя, д.7, оф.38
+                        p.text 
+                            b ИНН/ КПП:  
+                            span 9729025722/ 772901001 
+                        p.text 
+                            b ОГРН: 
+                            span 1167746851084
+                        p.text 
+                            b Расчетный счет: 
+                            span 40702810102300005873
+                        p.text 
+                            b Корреспондентский счет:  
+                            span 30101810200000000593
+                        p.text 
+                            b БИК:  
+                            span 044525593
+                        p.text 
+                            b Полное наименование банка
+                            span  АО «АЛЬФА-БАНК» г. Москва:  

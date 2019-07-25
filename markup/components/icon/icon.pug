@@ -1,0 +1,45 @@
+mixin icon(params)
+    -
+        var name_block = 'icon',
+        currentClass = name_block;
+        if(params != undefined && 'mod' in params && params.mod.length) currentClass =  name_block+'_'+params.mod;
+        if(params != undefined && 'size' in params && params.size.length) currentClass +=  ' '+params.size;
+        if(params != undefined && 'semantic' in params && params.semantic.length) currentClass +=  ' '+params.semantic;
+    +b.I(class= currentClass)
+    -
+        /*case params.mod
+            when 'arrow'
+                i(class="large "+params.mod+" icon")
+            when 'search'
+                i(class="large "+params.mod+" icon")
+            when 'basket'
+                i(class="large "+params.mod+" icon")
+            when 'home'
+                i(class="large "+params.mod+" icon")
+            when 'user'
+                i(class="large "+params.mod+" icon")
+            when 'phone'
+                i(class="large "+params.mod+" icon")
+            when 'burger'
+                i(class="large "+params.mod+" icon")
+            when 'map'
+                i(class="large "+params.mod+" icon")
+            when 'phone-two'
+                i(class="large "+params.mod+" icon")
+            when 'social_vk'
+                i(class="large "+params.mod+" icon")
+            when 'social_fb'
+                i(class="large "+params.mod+" icon")
+            when 'social_lin'
+                i(class="large "+params.mod+" icon")
+            when 'social_yt'
+                i(class="large "+params.mod+" icon")
+            when 'social_in'
+                i(class="large "+params.mod+" icon")
+            when 'close'
+                i(class="large "+params.mod+" icon")
+            when 'search-main'
+                i(class="large "+params.mod+" icon")
+            when 'filter'
+                i(class="large "+params.mod+" icon")
+        */

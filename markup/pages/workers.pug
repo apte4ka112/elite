@@ -1,0 +1,160 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+include ../components/block-container/block-container
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/pagination/pagination
+include ../components/banner/banner
+include ../components/headline/headline.pug
+include ../components/filter-sidebar/filter-sidebar
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page
+        | %=symbols=%
+        +header()
+        .main
+            +b.section
+                +e.box
+                    +b.head-conent.inner
+                        +headline({text: 'Наши Сотрудники'})
+                            +breadcrumbs({elements: ['Главная', 'Наши сотрудники']})
+                    +b.iner-content
+                        .text
+                            p Команда «ELIT»  — это большая семья, состоящая из:  менеджеров, импорт-менеджеров, архитекторов, дизайнеров интерьеров, администраторов, монтажников, реставраторов, знающих и любящих свое дело. Цель нашей работы – всегда быть лучшими для своих клиентов, совместно создавать новые проекты, предлогать только качественные и нужные вещи, желание сделать Ваш дом красивым и уютным. Мы всегда развиваемся и стремимся к лучшему !
+                        .workers--cel
+                            <div style="width: 65%; margin-left: auto; margin-right: auto" class="workers--cel-mob">
+                                <div class="c-rhombus">
+                                    <div class="item">
+                                        <div class="c-ratio _ratio-100">
+                                            <div class="bg cover" style="background-image: url(https://randomuser.me/api/portraits/men/50.jpg)"></div>
+                                            <span class="rhombus__item">
+                                                .name Александр сергеевич 
+                                                div.name 
+                                                    span.gray Редактор
+                                                div
+                                                    a.gray(href="#").basket--clear--link redactor@mail.ru
+                                            </span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="c-ratio _ratio-100">
+                                            <div class="bg cover" style="background-image: url(https://randomuser.me/api/portraits/men/23.jpg)"></div>
+                                            <span class="rhombus__item">
+                                                .name Александр сергеевич 
+                                                div.name 
+                                                    span.gray Редактор
+                                                div
+                                                    a.gray(href="#").basket--clear--link redactor@mail.ru
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="c-ratio _ratio-100">
+                                            <div class="bg cover" style="background-image: url(https://randomuser.me/api/portraits/men/11.jpg)"></div>
+                                            <span class="rhombus__item">
+                                                .name Александр сергеевич 
+                                                div.name 
+                                                    span.gray Редактор
+                                                div
+                                                    a.gray(href="#").basket--clear--link redactor@mail.ru
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="c-ratio _ratio-100">
+                                            <div class="bg cover" style="background-image: url(https://randomuser.me/api/portraits/men/46.jpg)"></div>
+                                            <span class="rhombus__item">
+                                                .name Александр сергеевич 
+                                                div.name 
+                                                    span.gray Редактор
+                                                div
+                                                    a.gray(href="#").basket--clear--link redactor@mail.ru
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="c-ratio _ratio-100">
+                                            <div class="bg cover" style="background-image: url(https://randomuser.me/api/portraits/men/18.jpg)"></div>
+                                            <span class="rhombus__item">
+                                                .name Александр сергеевич 
+                                                div.name 
+                                                    span.gray Редактор
+                                                div
+                                                    a.gray(href="#").basket--clear--link redactor@mail.ru
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="c-ratio _ratio-100">
+                                            <div class="bg cover" style="background-image: url(https://randomuser.me/api/portraits/men/9.jpg)"></div>
+                                            <span class="rhombus__item">
+                                                .name Александр сергеевич 
+                                                div.name 
+                                                    span.gray Редактор
+                                                div
+                                                    a.gray(href="#").basket--clear--link redactor@mail.ru
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="c-ratio _ratio-100">
+                                            <div class="bg cover" style="background-image: url(https://randomuser.me/api/portraits/men/2.jpg)"></div>
+                                            <span class="rhombus__item">
+                                                .name Александр сергеевич 
+                                                div.name 
+                                                    span.gray Редактор
+                                                div
+                                                    a.gray(href="#").basket--clear--link redactor@mail.ru
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="c-ratio _ratio-100">
+                                            <div class="bg cover" style="background-image: url(https://randomuser.me/api/portraits/men/27.jpg)"></div>
+                                            <span class="rhombus__item">
+                                                .name Александр сергеевич 
+                                                div.name 
+                                                    span.gray Редактор
+                                                div
+                                                    a.gray(href="#").basket--clear--link redactor@mail.ru
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="c-ratio _ratio-100">
+                                            <div class="bg cover" style="background-image: url(https://randomuser.me/api/portraits/men/67.jpg)"></div>
+                                            <span class="rhombus__item">
+                                                .name Александр сергеевич 
+                                                div.name 
+                                                    span.gray Редактор
+                                                div
+                                                    a.gray(href="#").basket--clear--link redactor@mail.ru
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    .ui.modal.modal_theme_order.basket--clear
+                        i.modal__close.close
+                        .s-modal--header.center
+                            .s-modal--text Вы хотите написать письмо на 
+                                br
+                                |e-mail нашему сотруднику?
+                            .s-modal--button Да
+                            .s-modal--button.clearHide Нет
+                +footer({promo: true})
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

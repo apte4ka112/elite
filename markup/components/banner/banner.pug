@@ -1,0 +1,13 @@
+include ../button/button
+mixin banner(params)
+    -
+        var name_block = 'banner',
+        currentClass = name_block;
+        if('mod' in params && params.mod.length) currentClass =  name_block+'_'+params.mod;
+    +b.DIV(class= currentClass)
+        +e.box
+            +e.title!= params.title
+            +e.hr
+            +e.remark!= params.remark
+            +e.btn
+                +button({text:'Подробнее',mod: 'banner'})

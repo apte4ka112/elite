@@ -1,0 +1,14 @@
+mixin button(params)
+    -
+        var name_block = 'button',
+        currentClass = name_block;
+        if('type' in params && params.type.length) currentClass += '_type_'+params.type+' ';
+        if('theme' in params && params.theme.length) currentClass += name_block+'_theme_'+params.theme+' ';
+        if('mod' in params && params.mod.length) currentClass += '_mod_'+params.mod+' ';
+        if('active' in params && params.active) currentClass += ' active';
+    if('link' in params && params.link.length)
+        +b.A(class=currentClass href=params.link)&attributes(params.data)
+            +e.SPAN.text= params.text
+    else
+        +b.BUTTON(class=currentClass)&attributes(params.data)
+            +e.SPAN.text=params.text

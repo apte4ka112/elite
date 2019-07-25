@@ -1,0 +1,34 @@
+mixin header-main
+    +b.header-main
+        +e.box.section__box
+            +e.left
+                +b.header__mobile-menu(id="modal-link")
+                    +icon({semantic: 'bars'})
+                +b.header__phone
+                    != pugHelpers.Icon.call(locals, {iconName: 'phone'})
+                    div
+                        +e.phone-number
+                            | 8 (495) 783-97-33
+                        +e.phone-description Часы работы 10:00 21:00 МСК
+                +b.A.header__icon-box_search(href='/search.html').modalSearch--link
+                    +e.SPAN.icon-name Поиск
+                    +e.icon_search
+                        != pugHelpers.Icon.call(locals, {iconName: 'search'})
+            +e.center
+                +e.A.logo(href="/" style="background-image:url(static/img/assets/header/header-main/logo-min.svg)")
+            
+            +e.right
+                +b.A.header__icon-box_cart(href='')
+                    +e.SPAN.icon-name Корзина
+                    +e.main--basket
+                        +e.icon_cart
+                            svg(width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M11.1401 22C11.1401 20.8281 10.1691 19.8571 8.99721 19.8571C7.82534 19.8571 6.85435 20.8281 6.85435 22C6.85435 23.1719 7.82534 24.1429 8.99721 24.1429C10.1691 24.1429 11.1401 23.1719 11.1401 22ZM26.1401 22C26.1401 20.8281 25.1691 19.8571 23.9972 19.8571C22.8253 19.8571 21.8544 20.8281 21.8544 22C21.8544 23.1719 22.8253 24.1429 23.9972 24.1429C25.1691 24.1429 26.1401 23.1719 26.1401 22ZM28.2829 3.78571C28.2829 3.19978 27.7974 2.71428 27.2115 2.71428H7.10547C6.93806 1.91071 6.90458 0.571428 5.78292 0.571428H1.49721C0.911272 0.571428 0.425781 1.05692 0.425781 1.64286C0.425781 2.22879 0.911272 2.71428 1.49721 2.71428H4.91239L7.87556 16.4922C7.6077 17.0112 6.85435 18.2667 6.85435 18.7857C6.85435 19.3717 7.33984 19.8571 7.92578 19.8571H25.0686C25.6546 19.8571 26.1401 19.3717 26.1401 18.7857C26.1401 18.1998 25.6546 17.7143 25.0686 17.7143H9.66685C9.83426 17.3795 10.0686 17.0279 10.0686 16.6429C10.0686 16.2411 9.93471 15.856 9.851 15.471L27.3287 13.4286C27.8644 13.3616 28.2829 12.8929 28.2829 12.3571V3.78571Z" fill="#FCFCFB")
+
+                        +e.icon_cart-count 3
+                +b.header__phone
+                    != pugHelpers.Icon.call(locals, {iconName: 'phone'})
+                    div
+                        +e.phone-number
+                            | 8 (800)  550-78-77
+                        +e.phone-description Бесплатный звонок по РФ

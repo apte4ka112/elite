@@ -1,0 +1,84 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+include ../components/block-container/block-container
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/pagination/pagination
+include ../components/banner/banner
+include ../components/headline/headline.pug
+include ../components/filter-sidebar/filter-sidebar
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page
+        | %=symbols=%
+        +header()
+        .main
+            +b.section
+                +e.box
+                    +b.head-conent.inner
+                        +headline({text: 'Статьи'})
+                            +breadcrumbs({elements: ['Главная', 'Статьи']})
+                    +b.iner-content
+                        .iner-content-level--2
+                            .block--item.grid.flex.item-2
+                                    .item
+                                        +b.block.border
+                                            +b.projects.articles
+                                                +e.view
+                                                    +e.image
+                                                        .c-ratio._ratio-10
+                                                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/iblock/e33/e3317a6f3d6cf9428a214c5fe8ef3bd9.jpg')")
+                                                +e.main
+                                                    +e.name Кровать с мягким изголовьем
+                                                    +e.text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах.
+                                                    a.button(href="#") Подробней     
+                                    .item
+                                        +b.block.border
+                                            +b.projects.articles
+                                                +e.view
+                                                    +e.image
+                                                        .c-ratio._ratio-10
+                                                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/iblock/e33/e3317a6f3d6cf9428a214c5fe8ef3bd9.jpg')")
+                                                +e.main
+                                                    +e.name Кровать с мягким изголовьем
+                                                    +e.text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах.
+                                                    a.button(href="#") Подробней  
+                                    .item
+                                        +b.block.border
+                                            +b.projects.articles
+                                                +e.view
+                                                    +e.image
+                                                        .c-ratio._ratio-10
+                                                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/iblock/e33/e3317a6f3d6cf9428a214c5fe8ef3bd9.jpg')")
+                                                +e.main
+                                                    +e.name Кровать с мягким изголовьем
+                                                    +e.text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах.
+                                                    a.button(href="#") Подробней  
+                                    .item
+                                        +b.block.border
+                                            +b.projects.articles
+                                                +e.view
+                                                    +e.image
+                                                        .c-ratio._ratio-10
+                                                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/iblock/e33/e3317a6f3d6cf9428a214c5fe8ef3bd9.jpg')")
+                                                +e.main
+                                                    +e.name Кровать с мягким изголовьем
+                                                    +e.text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах.
+                                                    a.button(href="#") Подробней  
+                        .catalog__pagination.fixed_block_stop
+                            +pagination({})         
+                +footer({promo: false})
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

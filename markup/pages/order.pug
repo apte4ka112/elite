@@ -1,0 +1,76 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+include ../components/block-container/block-container
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/pagination/pagination
+include ../components/banner/banner
+include ../components/headline/headline.pug
+include ../components/filter-sidebar/filter-sidebar
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page
+        | %=symbols=%
+        +header()
+        .main
+            +b.section
+                +e.box
+                    +b.head-conent.inner
+                        +headline({text: 'Как заказать'})
+                            +breadcrumbs({elements: ['Главная', 'Как заказать']})
+                    +b.iner-content
+                        .iner-content-level--2
+                            .text
+                                p Мы постарались сделать наш сайт удобным и понятным Вам. Вы можете легко выбрать и купить нужный Вам товар из почти 30 000 товаров представленных на сайте, получить консультацию от наших специалистов в онлайн чате или по телефону, либо отправить нам запрос на электронную  почту.  Для начала ознакомьтесь с продукцией нашего интернет магазина и выберете нужный Вам товар, далее  отправите нам запрос любым из выше перечисленных способов, согласуйте стоимость и срок поставки, получите Ваш  товар. Если Вы не нашли то что искали, то сделайте нам запрос и мы обязательно подберем для Вас другие варианты. Ознакомьтесь с подробной информацией по заказу товара на схеме показанной ниже:
+                        .block--item
+                            +b.order
+                                +e.image 1
+                                +e.main
+                                    .title.marBot15px Выбор
+                                    .text  Выберите товар или композицию которая Вас интересует  в каталоге сайта, просмотрите товар нажав на фото, нажмите кнопку «в корзину». Ваш  выбор сделан, нужный Вам товар теперь в корзине заказов. 
+                            +b.order
+                                +e.image 2
+                                +e.main
+                                    .title.marBot15px Отправить запрос
+                                    .text  После того как Вы сделали выбор одного или нескольких товаров, Вам необходимо перейти  на страницу «Корзина» и отправить запрос менеджеру того, что Вы выбрали, нажать на кнопку «отправить запрос».
+                            +b.order
+                                +e.image 3
+                                +e.main
+                                    .title.marBot15px Коммерческое предложение
+                                    .text  После получения запроса, наши специалисты ответят Вам по всем вопросам реализации заказа в самые короткие сроки, согласуют место доставки и стоимость товара.
+                            +b.order
+                                +e.image 4
+                                +e.main
+                                    .title.marBot15px Договор
+                                    .text  После согласования всех вопросов по заказу товара, мы заключаем совместный договор, по которому несем гарантию на товар и обязательства по его доставки.
+                            +b.order
+                                +e.image 5
+                                +e.main
+                                    .title.marBot15px Оплата
+                                    .text  После заключения договора на товар, мы принимаем от Вас денежные средства за товар в офисе компании или на счет компании в случае безналичного расчета.
+                            +b.order
+                                +e.image 6
+                                +e.main
+                                    .title.marBot15px Доставка и монтаж
+                                    .text   Мы доставляем Ваш  товар по указанному адресу и производим монтаж всего заказа нашей сервисной службой.
+                            +b.order
+                                +e.image 7
+                                +e.main
+                                    .title.marBot15px Гарантия
+                                    .text  На весь товар наша компания предоставляет гарантию качества по договору, а так же гарантию того, что Вам все понравится.
+            +footer({promo: true})
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+

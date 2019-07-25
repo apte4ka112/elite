@@ -1,0 +1,205 @@
+.block-container .arrow svg {
+  width: 100%;
+}
+.block-container.top {
+  margin-top: 0 !important;
+  position: relative;
+}
+@media (max-width: 772px) {
+  .block-container__content {
+    overflow: visible;
+  }
+}
+.block-container__header {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  justify-content: space-between;
+}
+.block-container__header.border {
+  flex-wrap: wrap;
+}
+.block-container__header .arrow.last {
+  margin-top: -6px;
+}
+.block-container__header .button {
+  margin: 0 3px;
+}
+.block-container__header .button:last-child {
+  margin-right: 0;
+}
+@media (max-width: 772px) {
+  .block-container__header {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .block-container__header {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .block-container__header .button {
+    margin-left: 0;
+    padding: 0;
+    margin-right: 5px;
+    font-size: 12px;
+    padding: 0 25px;
+  }
+}
+@media (max-width: 649px) {
+  .block-container__header {
+    margin-bottom: 10px;
+  }
+}
+.block-container__navigation.head {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+.block-container__navigation._course {
+  position: absolute;
+  right: 0;
+  right: 10px;
+  top: -27px;
+}
+.block-container__navigation._course .product__share--text {
+  margin: 0;
+  padding-left: 5px;
+  padding-top: 3px;
+  text-decoration: none !important;
+}
+@media (max-width: 767px) {
+  .block-container__navigation {
+    margin-top: 23px;
+    margin-bottom: 0 !important;
+    width: 100%;
+  }
+}
+.block-container__navigation-link {
+  border-bottom: 1px dotted;
+}
+.block-container__navigation-link:hover {
+  color: #c87065;
+}
+.block-container__navigation .button-group {
+  margin-top: -5px;
+}
+.block-container__title {
+  line-height: normal;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-family: 'HelveticaNeueCyr', Arial, sans-serif;
+  color: #434343;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 80%;
+}
+@media (max-width: 1119px) {
+  .block-container__title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .block-container__title {
+    padding-left: 0;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .block-container__title {
+    line-height: 21px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 767px) {
+  .block-container .button-group {
+    width: 100%;
+    justify-content: end;
+  }
+}
+@media (max-width: 767px) {
+  .block-container__header {
+    position: relative;
+  }
+}
+@media (max-width: 1119px) {
+  .block-container__header.top {
+    margin-top: -20px;
+  }
+}
+@media (max-width: 767px) {
+  .block-container__header {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .block-container__header .block-container__title {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+  }
+  .block-container__header .block-container__navigation {
+    width: auto;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .block-container__navigation._course {
+    width: auto;
+    top: -15px;
+  }
+  .block-container__navigation._course .product__share--text {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .block-container__navigation .button-group {
+    margin-top: 10px;
+  }
+  .block-container__title {
+    max-width: 100%;
+  }
+  .block-container__header {
+    position: relative;
+  }
+  .block-container__header .button {
+    padding: 0 ;
+    width: 100%;
+  }
+  .block-container__navigation {
+    margin-top: 0;
+  }
+}
+.menu-fixed {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-fixed .block-container__navigation.head {
+  display: none;
+}
+@media (max-width: 640px) {
+  .block-container__navigation._course {
+    top: 10px;
+    width: auto;
+    position: relative;
+  }
+  .block-container__header {
+    flex-wrap: wrap;
+  }
+  .block-container__header .block-container__title {
+    margin-bottom: 15px;
+  }
+}

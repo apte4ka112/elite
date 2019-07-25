@@ -1,0 +1,253 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+include ../components/block-container/block-container
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/pagination/pagination
+include ../components/banner/banner
+include ../components/headline/headline.pug
+include ../components/filter-sidebar/filter-sidebar
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page
+        | %=symbols=%
+        +header()
+        .main
+            +b.section
+                +e.box
+                    +b.head-conent.inner
+                        +headline({text: 'КОРЗИНА ЗАКАЗОВ'})
+                            +breadcrumbs({elements: ['Главная', 'Корзина']})
+                        p.headline__text!=('Спасибо за Ваш выбор. <br> Для завершения заказа отпраьте нам запрос и укажите контакты для обратной связи.   ') 
+                    .block-container__header.top
+                        h2.block-container__title 
+                        .block-container__navigation._course
+                            .product__share--text Отображать цены
+                            .course
+                                .course__item.active
+                                    i.ruble.icon
+                                .course__item
+                                    i.euro.icon
+                                .course__item
+                                    i.dollar.icon
+                    .iner-content
+                        .iner-content-level--2
+                            .catalog
+                                +b.product-card._type_basket._disable
+                                    .composition__check
+                                        .composition__close
+                                            svg(width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                path(d="M1 1L11.5 11.5M1 11.5L11.5 1" stroke="#414141")
+                                        .ui.checkbox(style="opacity: 0;z-index: -1;")
+                                                input(class="hidden" type="checkbox" id="agreement-2" required="" tabindex="0")
+                                                label
+                                    .product-card__image
+                                        .product-date 04.08.1999
+                                        .c-ratio._ratio-10
+                                            .bubbles
+                                                .bubbles--r
+                                                    .bubble.bubble_discount -10%
+                                                .bubbles--r
+                                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                                        .product__number фото 3 штуки
+
+                                    +e.content
+                                        +e.item
+                                            +e.info--prev
+                                                +e.A.name(href="#") Кровать с мягким изголовьем
+                                                +e.header
+                                                    <a class="product__info--link composition--link" href="#">Состав комплекта</a>
+                                            +e.info--main
+                                                +e.info--cell.mobille
+                                                    +e.header
+                                                        +e.title Артикул:
+                                                        +e.text 4614/TL1
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Коллекция:
+                                                        +e.text 113-223
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Товар:
+                                                        +e.text.small в наличии
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Стоимость:
+                                                        +e.text.price от 262 475 ₽
+                                                        +e.text.price--del от 262 475 ₽
+                                                .ui.checkbox(style="opacity: 0;z-index: -1;")
+                                                    input(class="hidden" type="checkbox" id="agreement-2" required="" tabindex="0")
+                                                    label
+                                                +e.info--button
+                                                    +b.button._type_primary  запрос отправлен 
+                                      
+                                +b.product-card._type_basket
+                                    .composition__check
+                                        .composition__close
+                                            svg(width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                path(d="M1 1L11.5 11.5M1 11.5L11.5 1" stroke="#414141")
+                                        .ui.checkbox
+                                                input(class="hidden" type="checkbox" id="agreement-2" required="" tabindex="0")
+                                                label
+                                    .product-card__image
+                                        
+                                        .c-ratio._ratio-10
+                                            .bubbles
+                                                .bubbles--r
+                                                    .bubble.bubble_discount -10%
+                                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                                        .product__number фото 3 штуки
+                                    +e.content
+                                        +e.item
+                                            +e.info--prev
+                                                +e.A.name(href="#") Кровать с мягким изголовьем
+                                                +e.header
+                                                    <a class="product__info--link composition--link" href="#">Состав комплекта</a>
+                                            +e.info--main
+                                                +e.info--cell.mobille
+                                                    +e.header
+                                                        +e.title Артикул:
+                                                        +e.text 4614/TL1
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Коллекция:
+                                                        +e.text 113-223
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Товар:
+                                                        +e.text.small в наличии
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Стоимость:
+                                                        +e.text.price от 262 475 ₽
+                                                        +e.text.price--del от 262 475 ₽
+                                                .ui.checkbox
+                                                    input(class="hidden" type="checkbox" id="agreement-2" required="" tabindex="0")
+                                                    label
+                                                +e.info--button.request--link
+                                                    +b.button._type_primary отправить запрос
+                                +b.product-card._type_basket
+                                    .composition__check
+                                        .composition__close
+                                            svg(width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                path(d="M1 1L11.5 11.5M1 11.5L11.5 1" stroke="#414141")
+                                        .ui.checkbox
+                                                input(class="hidden" type="checkbox" id="agreement-2" required="" tabindex="0")
+                                                label
+                                    .product-card__image
+                                        .c-ratio._ratio-10
+                                            .bubbles
+                                                .bubbles--r
+                                                    .bubble.bubble_discount -10%
+                                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                                        .product__number фото 3 штуки
+                                    +e.content
+                                        +e.item
+                                            +e.info--prev
+                                                +e.A.name(href="#") Кровать с мягким изголовьем
+                                                +e.header
+                                                    <a class="product__info--link composition--link" href="#">Состав комплекта</a>
+                                            +e.info--main
+                                                +e.info--cell.mobille
+                                                    +e.header
+                                                        +e.title Артикул:
+                                                        +e.text 4614/TL1
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Коллекция:
+                                                        +e.text 113-223
+                                            
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Товар:
+                                                        +e.text.small в наличии
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Стоимость:
+                                                        +e.text.price от 262 475 ₽
+                                                        +e.text.price--del от 262 475 ₽
+                                                .ui.checkbox
+                                                    input(class="hidden" type="checkbox" id="agreement-2" required="" tabindex="0")
+                                                    label
+                                                +e.info--button.request--link
+                                                    +b.button._type_primary отправить запрос
+                                +b.product-card._type_basket
+                                    .composition__check
+                                        .composition__close
+                                            svg(width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                                path(d="M1 1L11.5 11.5M1 11.5L11.5 1" stroke="#414141")
+                                        .ui.checkbox
+                                                input(class="hidden" type="checkbox" id="agreement-2" required="" tabindex="0")
+                                                label
+                                    .product-card__image
+                                        .c-ratio._ratio-10
+                                            .bubbles
+                                                .bubbles--r
+                                                    .bubble.bubble_discount -10%
+                                            .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/be1/200_200_2/be1d6beb7cd4a6bc16710911a7bbfe2d.jpg')", alt="")
+                                        .product__number фото 3 штуки
+                                    +e.content
+                                        +e.item
+                                            +e.info--prev
+                                                +e.A.name(href="#") Кровать с мягким изголовьем
+                                                +e.header
+                                                        +e.title Артикул:
+                                                        +e.text 4614/TL1
+                                                +e.header
+                                                    +e.title Товар:
+                                                    +e.text в наличии
+                                            +e.info--main
+                                            
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Модель:
+                                                        +e.text 113-223
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Размер:
+                                                        +e.text –
+                                            
+                                                +e.info--cell
+                                                    +e.header
+                                                        +e.title Стоимость:
+                                                        +e.text.price от 262 475 ₽
+                                                        +e.text.price--del от 262 475 ₽
+                                                .ui.checkbox
+                                                    input(class="hidden" type="checkbox" id="agreement-2" required="" tabindex="0")
+                                                    label
+                                                +e.info--button.tovar--link
+                                                    +b.button._type_primary отправить запрос
+                            
+                        .catalog__footer
+                            .catalog--button.basket--clear--link
+                                +b.button._type_primary очистить корзину
+                            .catalog--button
+                                +b.button._type_primary.big распечатать
+                            .catalog--button.basket--order--link
+                                +b.button._type_primary отправить все
+                    .ui.modal.modal_theme_order.basket--clear
+                        i.modal__close.close
+                        .s-modal--header.center
+                            .s-modal--text Вы действительно хотите полностью очистить корзину и удалить все позиции ?
+                            .s-modal--button Да
+                            .s-modal--button.clearHide Нет
+                    .ui.modal.modal_theme_order.basket--order
+                        i.modal__close.close
+                        .s-modal--header
+                            .s-modal--text У Вас нет выбранных позиций.
+                            .s-modal--text!=('Поставьте метку в чекбоксе <br> в виде галочки  <img src="https://dev.elite-moscow.ru/local/templates/new-semantic-ui/images/check_popup.png" style="margin-bottom: -8px;width: 24px;height: 24px;"/> <br> и повторите запрос еще раз.') 
+                +footer({promo: false})
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

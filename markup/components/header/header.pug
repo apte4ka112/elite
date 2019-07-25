@@ -1,0 +1,12 @@
+include header-top/header-top
+include header-main/header-main
+include header-bottom/header-bottom
+mixin header
+    +b.header
+        +e.wrap
+            +e.top
+                +header-top()
+            +e.main
+                +header-main()
+        +e.bottom
+            +header-bottom()

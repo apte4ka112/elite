@@ -1,0 +1,108 @@
+.promo-full {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 4;
+}
+@media (max-width: 1119px) {
+  .promo-full {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1023px) {
+  .promo-full {
+    background-attachment: fixed;
+    background-position: center center;
+  }
+}
+.promo-full:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+.promo-full__box {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.promo-full_footer .promo-full__title {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 36px;
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.promo-full_footer .promo-full__description {
+  text-align: center;
+  line-height: 18px;
+  font-size: 14px;
+  color: #ffffff;
+  max-width: 320px;
+  margin: 0 auto 26px;
+}
+.promo-full_footer .promo-full__box {
+  text-align: center;
+}
+.promo-full_footer .promo-full__box:after {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: '';
+}
+.promo-full_footer .promo-full__center {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+.promo-full_footer .promo-full__center .form {
+  max-width: 288px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .promo-full__box {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .promo-full_footer .promo-full__title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: normal;
+  }
+  .form_footer .form__check label {
+    font-size: 12px;
+  }
+  .promo-full_footer .promo-full__description {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .promo-full__box {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .promo-full_footer .promo-full__center {
+    max-width: 85%;
+  }
+}

@@ -1,0 +1,114 @@
+.button {
+    border-radius: 4px;
+    padding: 0 20px;
+    height: 28px;
+
+
+    background: #ddd;
+
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: 14px;
+
+    outline: transparent;
+    border: none;
+    box-shadow: none;
+
+    transition: all .3s;
+    cursor: pointer;
+
+    &.active {
+        background: #4d4145 !important;
+        color: #fff;
+    }
+    &:hover{
+        background: #ccc;
+    }
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 1px;
+        margin-right: -1px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    &__text {
+        display: inline-block;
+        vertical-align: middle;
+        font: inherit;
+        color: inherit;
+        text-transform: inherit;
+       
+    }
+
+    &.button {
+        &_type {
+            &_primary {
+                background: transparent;
+                height: 32px;
+                padding: 0 30px;
+                border-radius: 30px;
+                border: 1px solid #BFA96A;
+                text-transform: uppercase;
+
+                &.active,
+                &:hover {
+                    background: #BFA96A;
+                    color: #ffffff;
+                    @media (max-width: 767px) {
+                        background: transparent;
+                        color: #000
+                    }
+                }
+            }
+        }
+
+        &_theme {
+            &_light {
+                background: transparent;
+                border: 1px solid #BFA96A;
+                color: #434343;
+                &:hover{
+                    color: #fff;
+                    cursor: pointer;
+                    border: 1px solid #BFA96A;
+                    background:#BFA96A;
+                }
+            }
+        }
+
+
+        &_mod {
+            &_card {
+                max-width: 160px;
+                margin: 0 auto;
+                padding: .515625em 1.5em ;
+                font-size: 13px;
+                line-height: normal;
+
+            }
+
+            &_banner {
+                width: 100%;
+                max-width: 116px;
+                background: transparent;
+                color: #fff;
+                border: 1px solid #fff;
+                height: 36px;
+                &:hover{
+                    background: hsla(0, 0%, 100%, 0.8);
+                    color: #000;
+                    border: none;
+                }
+            }
+            &_header-cart {
+                border-radius: 4px;
+
+            }
+        }
+    }
+}

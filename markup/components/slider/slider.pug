@@ -1,0 +1,99 @@
+include ../card/card
+include ../brand-card/brand-card
+mixin slider(params)
+    -
+        var name_block = 'slider',
+        currentClass = name_block;
+        if('type' in params && params.type.length) currentClass = name_block+'_'+params.type;
+    +b.DIV(class= currentClass)
+        if(params.elements)
+            if(params.type === 'main')
+                .left-bg(style="width: calc((100% - 1170px)/2)")
+                .right-bg(style="width: calc((100% - 1170px)/2)")
+                +e.header
+                    +e.navigation
+                        +e.head
+                            +e.navigation-item(data-tab="all" title="Все стили").all.active
+                                span Все стили
+                            +e.navigation-item(data-tab="modern").left.br
+                                span Современный
+                            .border
+                            +e.navigation-item(data-tab="classic").right.br
+                                span Классика
+            -
+                var classList = 'list_'+params.type + ' owl-carousel';
+            +e(class=classList data-carousel= params.carousel)
+                each item in params.elements
+                    case params.type
+                        when 'main'
+                            +e.item
+                                img(src='../static/img/assets/slider/main.jpg' alt='')
+                                +e.item-box
+                                    +e.item-info
+                                        .wrap
+                                            +e.item-title Интерьеры италии
+                                            +e.item-description
+                                                | Кухни CESAR. Официальный
+                                                br
+                                                | диллер по России и странам СНГ
+                                            +e.item-btn
+                                                +button({text: 'Подробнее', theme: ''})
+                                    +e.item-view
+                                        +e.item-add-image
+                                            .c-ratio._ratio-10
+                                                .bg.cover(style='background-image: url("static/img/assets/slider/main.jpg")')
+                            +e.item
+                                img(src='../static/img/assets/slider/main.jpg' alt='')
+                                +e.item-box
+                                    +e.item-info
+                                        .wrap
+                                            +e.item-title Интерьеры италии
+                                            +e.item-description
+                                                | Кухни CESAR. Официальный
+                                                br
+                                                | диллер по России и странам СНГ
+                                          
+                            +e.item_right
+                                img(src='../static/img/assets/slider/main.jpg' alt='')
+                                +e.item-box
+                                    +e.item-info
+                                        .wrap
+                                            +e.item-title Интерьеры италии
+                                            +e.item-description
+                                                | Кухни CESAR. Официальный
+                                                br
+                                                | диллер по России и странам СНГ
+                                            +e.item-btn
+                                                +button({text: 'Подробнее', theme: ''})
+                                    +e.item-view
+                                        +e.item-add-image
+                                            .c-ratio._ratio-10
+                                                .bg.cover(style='background-image: url("static/img/assets/slider/main.jpg")')
+                            +e.item_logo
+                                img(src='../static/img/assets/slider/main.jpg' alt='')
+                                +e.item-box
+                                    +e.item-info.left.last
+                                        .wrap
+                                            +e.item-title Интерьеры италии
+                                            +e.item-description
+                                                | Кухни CESAR. Официальный
+                                                br
+                                                | диллер по России и странам СНГ
+                                            +e.item-btn
+                                                +button({text: 'Подробнее', theme: ''})
+                            +e.item_logo
+                                img(src='../static/img/assets/slider/main.jpg' alt='')
+                                +e.item-box
+                                    +e.item-info.right.last
+                                        .wrap
+                                            +e.item-title Интерьеры италии
+                                            +e.item-description
+                                                | Кухни CESAR. Официальный
+                                                br
+                                                | диллер по России и странам СНГ
+                        when 'brand'
+                            +brand-card()
+                        when 'card'
+                            +card(item)
+                        when 'entry'
+                            +entry()

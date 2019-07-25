@@ -1,0 +1,59 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url("../img/assets/banner/catalog.jpg") center / cover no-repeat;
+    margin-bottom: 10px;
+
+    &__box {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 50px 0 0;
+        text-align: center;
+        color: #fff;
+        background: rgba(29, 27, 27, 0.3);
+    }
+
+    &__title {
+        line-height: 29px;
+        font-size: 24px;
+        font-weight: 400;
+        display: block;
+        width: 100%;
+        @media (max-width:  1119px) {
+            font-size: 22px;
+        }
+    }
+
+    &__hr {
+        display: block;
+        height: 2px;
+        width: 24%;
+        margin: 25px 0 16px;
+        background: #fff;
+        padding: 0;
+
+    }
+
+    &__remark {
+        font-style: italic;
+        line-height: 1.6;
+        height: 65px;
+    }
+
+    &__btn {
+        @media (max-width:  1119px) {
+            .button{
+                width: 100px !important;
+                padding: 0;
+            }
+        }
+    }
+}

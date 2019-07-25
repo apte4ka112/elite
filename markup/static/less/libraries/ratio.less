@@ -1,0 +1,191 @@
+@computerBreakpoint: 1200px;
+@largestSmallMonitor: 1024px;
+@largestTabletScreen: 768px;
+@tabletBreakpoint: 640px;
+@largestMobileScreen: 639px;
+
+.c-ratio {
+
+  width: 100% !important;
+  overflow: hidden;
+  position: relative;
+  display: block;
+
+  &:before {
+    display: block;
+    content: " ";
+    width: 100%;
+  }
+
+  > .block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  /* ИЗОБРАЖЕНИЯ */
+  > .image {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &.contain.landscape,
+    &.contain.portrait,
+    &.cover.landscape,
+    &.cover.portrait {
+      display: block !important;
+      text-align: center;
+    }
+
+    &.contain.landscape img {
+      width: 100% !important;
+      height: auto !important;
+      max-height: none !important;
+    }
+
+    &.contain.portrait img {
+      height: 100% !important;
+      width: auto !important;
+      max-width: none !important;
+    }
+
+    &.cover.landscape img {
+      height: 100% !important;
+      width: auto !important;
+      max-width: none !important;
+    }
+    &.cover.portrait img {
+      width: 100% !important;
+      height: auto !important;
+      max-height: none !important;
+    }
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  > .video {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  > .bg {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &._darken:before {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0.65) 100%);
+      background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 26%,rgba(0,0,0,0.65) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 26%,rgba(0,0,0,0.65) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+    }
+
+    &.contain {
+      background-size: contain !important;
+    }
+
+    &.cover {
+      background-size: cover !important;
+    }
+
+    img {
+      width: 0 !important;
+      height: 0 !important;
+    }
+  }
+
+  .generateDefaultRatio(1);
+  @media only screen and (min-width: @computerBreakpoint) and (max-width: @largestSmallMonitor) {
+    .generateSmallRatio(1);
+  }
+  @media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
+    .generateTabletRatio(1);
+  }
+  @media only screen and (max-width: @largestMobileScreen) {
+    .generateMobileRatio(1);
+  }
+}
+
+
+
+@aspectRatioArray: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150;
+
+.generateDefaultRatio(@index: 1) when (@index <= length(@aspectRatioArray)) {
+  @heightPercent: extract(@aspectRatioArray, @index);
+
+  &._ratio-@{heightPercent} {
+    &:before {
+      padding: @heightPercent * 1% 0 0 0 !important;
+    }
+  }
+  .generateDefaultRatio(@index + 1);
+}
+
+.generateSmallRatio(@index: 1) when (@index <= length(@aspectRatioArray)) {
+  @heightPercent: extract(@aspectRatioArray, @index);
+
+  &._ratio-s-@{heightPercent} {
+    &:before {
+      padding: @heightPercent * 1% 0 0 0 !important;
+    }
+  }
+  .generateSmallRatio(@index + 1);
+}
+
+.generateTabletRatio(@index: 1) when (@index <= length(@aspectRatioArray)) {
+  @heightPercent: extract(@aspectRatioArray, @index);
+
+  &._ratio-t-@{heightPercent} {
+    &:before {
+      padding: @heightPercent * 1% 0 0 0 !important;
+    }
+  }
+  .generateTabletRatio(@index + 1);
+}
+
+.generateMobileRatio(@index: 1) when (@index <= length(@aspectRatioArray)) {
+  @heightPercent: extract(@aspectRatioArray, @index);
+
+  &._ratio-m-@{heightPercent} {
+    &:before {
+      padding: @heightPercent * 1% 0 0 0 !important;
+    }
+  }
+  .generateMobileRatio(@index + 1);
+}

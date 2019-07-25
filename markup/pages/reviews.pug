@@ -1,0 +1,101 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+include ../components/block-container/block-container
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/pagination/pagination
+include ../components/banner/banner
+include ../components/headline/headline.pug
+include ../components/filter-sidebar/filter-sidebar
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page
+        | %=symbols=%
+        +header()
+        .main
+            +b.section
+                +e.box
+                    +b.head-conent.inner
+                        +headline({text: 'Отзывы'})
+                            +breadcrumbs({elements: ['Главная', 'Отзывы']})
+                    +b.iner-content
+                        .iner-content-level--2
+                            +b.block
+                                +b.comments
+                                    +e.wrap
+                                        +e.avatar
+                                            img(src="../static/img/assets/catalog/avatar.png", alt="")
+                                        +e.content
+                                            +e.header
+                                                +e.name Виолетта Крылова
+                                                +e.info
+                                                    +e.info--city г. Москва
+                                                    +e.info--date 31 авг 2018
+                                            +e.message Чернова И.К., Гарибян Л.Р., Галушко А.В.-высококлассные профессионалы, каких в Московских клиниках не найдешь (мне есть , с чем сравнить...). Терпеливые, внимательные, скурпулезные. Не боятся принять, порой. нестандартные решения.
+                                
+                                +b.comments
+                                    +e.wrap
+                                        +e.avatar
+                                            img(src="../static/img/assets/catalog/avatar.png", alt="")
+                                        +e.content
+                                            +e.header
+                                                +e.name Виолетта Крылова
+                                                +e.info
+                                                    +e.info--city г. Москва
+                                                    +e.info--date 31 авг 2018
+                                            +e.message Чернова И.К., Гарибян Л.Р., Галушко А.В.-высококлассные профессионалы, каких в Московских клиниках не найдешь (мне есть , с чем сравнить...). Терпеливые, внимательные, скурпулезные. Не боятся принять, порой. нестандартные решения.
+                                                .more#more1 Чернова И.К., Гарибян Л.Р., Галушко А.В.-высококлассные профессионалы, каких в Московских клиниках не найдешь (мне есть , с чем сравнить...). Терпеливые, внимательные, скурпулезные. Не боятся принять, порой. нестандартные решения.
+                                            <a class="read-more link " href="more1">Читать полностью</a>
+                                +b.comments
+                                    +e.wrap
+                                        +e.avatar
+                                            img(src="../static/img/assets/catalog/avatar.png", alt="")
+                                        +e.content
+                                            +e.header
+                                                +e.name Виолетта Крылова
+                                                +e.info
+                                                    +e.info--city г. Москва
+                                                    +e.info--date 31 авг 2018
+                                            +e.message Чернова И.К., Гарибян Л.Р., Галушко А.В.-высококлассные профессионалы, каких в Московских клиниках не найдешь (мне есть , с чем сравнить...). Терпеливые, внимательные, скурпулезные. Не боятся принять, порой. нестандартные решения.
+                                                .more#more Чернова И.К., Гарибян Л.Р., Галушко А.В.-высококлассные профессионалы, каких в Московских клиниках не найдешь (мне есть , с чем сравнить...). Терпеливые, внимательные, скурпулезные. Не боятся принять, порой. нестандартные решения.
+                                            <a class="read-more link " href="more">Читать полностью</a>
+                        .iner-content-level--2
+                            .catalog__pagination
+                                +pagination({})
+                        .block--item.reviews--form
+                            .item
+                                +b.block.border(style="background: rgba(67, 67, 67, 0.01);border-color: #ccc;border-width: 1px;")
+                                    +e.wrap
+                                        .title.toCenter.marBot20px ОСТАВТЕ ВАШ ОТЗЫВ
+                                        +b.FORM(data-form).s-modal-form
+                                            .s-modal-form__input-box
+                                                input(type="text" name="name" placeholder="ФИО").field.field.field_theme_default
+                                            .s-modal-form__input-box
+                                                input(type="email" name="email" placeholder="E-mail").field.field.field_theme_default
+                                            .s-modal-form__input-box
+                                                textarea(name="", cols="30", rows="10" placeholder="Введите текст").field.field_theme_default
+                                            .sr-modal-form__agreement.ui.checkbox
+                                                input(type="checkbox" id="agreement-2" required="" checked) 
+                                                label(for="agreement-2")!=(' Я согласен с обработкой моих персональных данных в соответствии с <a href="#" class="personal-date"> политикой конфиденциальности.</a>')
+                                            .sr-modal-form__button
+                                                +button({
+                                                    text: 'оставить отзыв',
+                                                    type: 'primary',
+                                                })         
+                          
+                +footer({promo: false})
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+

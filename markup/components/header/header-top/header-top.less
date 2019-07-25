@@ -1,0 +1,179 @@
+.header-top {
+    height: 35px;
+    .ui.menu{
+        min-height: auto;
+        .item {
+            &:hover {
+                color: #B69E5E!important;
+            }
+        }
+    }
+    &__box {
+        height: 35px;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .ui.secondary.menu .item {
+            border-right: 1px solid #565656;
+            border-radius: 0;
+            margin: 0;
+            padding: 0 14px;
+            background: none;
+            &:hover {
+                background-color: transparent;
+            }
+            &:first-of-type {
+                padding-left: 2px;
+                padding-right: 27px;
+                line-height: 1;
+                .icon__home {
+                    margin-top: -2px;
+                }
+            }
+            &:last-of-type {
+                border-right: 0;
+            }
+        }
+        .ui.secondary.menu {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    &__logo {
+        margin-left: 26px;
+        margin-top: -20px;
+    }
+    &__left {
+        .ui.secondary.menu .item:first-of-type {
+            padding-left: 2px;
+
+            .icon {
+                line-height: 1;
+            }
+        }
+    }
+    svg{
+        &:hover{
+            path{
+                fill: #B69E5E!important;
+            }
+        }
+    }
+    &__right {
+        .ui.secondary.menu .item {
+            &:first-of-type {
+                position: relative;
+                padding-right: 18px;
+                padding-left: 23px;
+                border-right: none;
+                .icon__user {
+                    position: absolute;
+                    top: -2px;
+                    left: 0;
+                    width: 14px;
+                    height: 14px;
+                }
+                .icon {
+                    padding-right: 20px;
+                    font-size: 10px;
+                }
+            }
+            &:last-of-type {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+.right.item.translate:hover{
+    svg{
+        path{
+           fill: #B69E5E!important;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .header-top__box{
+        padding: 0 26px;
+        max-width: 100%;
+    }
+}
+@media (max-width: 1023px){
+    .header-top__box {
+        max-width: 100%;
+    }
+}
+@media (max-width: 992px){
+    .header-top__box{
+        padding: 0 20px;
+    }
+    .header-top__box .ui.secondary.menu .item:first-of-type{
+        padding-right: 15px;
+    }
+    .header-top__box .ui.secondary.menu .item{
+        padding-left: 14px;
+        padding-right: 6px;
+    }
+    .header-top__right .ui.secondary.menu .item:first-of-type{
+        padding-right: 31px;
+    }
+    .header-top__box{
+        padding: 0 20px;
+    }
+}
+@media (max-width: 767px){
+
+    .header-top__right .ui.secondary.menu .item {
+        display: none !important;
+    }
+    .header-top__box .ui.secondary.menu .item{
+        font-size: 11px;
+    }
+    .header-top {
+        height: 31px;
+        background: transparent;
+        .lang.ui.dropdown {
+            display: block;
+            .item {
+                display: block!important;
+                border: none!important;
+            }
+        }
+        &__left {
+            .menu.tiny .item {
+                border: none!important;
+            }
+        }
+    }
+
+}
+@media (max-width: 1024px){
+    .header-top__box .ui.secondary.menu .item{
+        font-size: 11px;
+    }
+}
+@media (max-width: 767px){
+    .header-top__box .ui.secondary.menu{
+        .item{
+            display: none;
+        }
+        .item.text.fs-14{
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .header-top__box .ui.secondary.menu .item{
+        display: none;
+    }
+    .header-top__box .ui.secondary.menu .item:first-of-type{
+        display: block;
+    }
+    .header-top__box .ui.secondary.menu .right.item{
+        display: none;
+    }
+}

@@ -1,0 +1,86 @@
+.form {
+  text-align: center;
+  color: #ffffff;
+}
+.form__main {
+  margin-bottom: 18px;
+}
+.form__title {
+  line-height: 36px;
+  font-size: 24px;
+  color: #ffffff;
+}
+.form__description {
+  line-height: 18px;
+  font-size: 12px;
+  color: #ffffff;
+}
+.form__input {
+  width: 100%;
+  height: 36px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #DEDEDF;
+  margin-bottom: 12px;
+  padding: 0 5px 0 16px;
+  outline: none;
+}
+.form__input.error {
+  border-color: red;
+}
+.form_footer {
+  color: #fff;
+}
+.form_footer .form__check label {
+  color: #fff !important;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: normal;
+}
+.form_footer .form__check label:hover,
+.form_footer .form__check label:focus,
+.form_footer .form__check label:active {
+  color: #fff;
+}
+.form_footer .form__check label a {
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+}
+.form_footer .button {
+  width: 100%;
+  color: #fff !important;
+  max-width: 180px;
+  height: 36px;
+}
+.form .ui.checkbox input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border-color: #E2E2E2;
+}
+.form .ui.checkbox input[type=checkbox] ~ label:before {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border-color: #E2E2E2;
+}
+.form .ui.checkbox input[type=checkbox] ~ label:after {
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  color: #000000;
+}
+.form .ui.checkbox input[type=checkbox]:checked {
+  background: #FFEBA0;
+  border-color: #F1F1F1;
+}
+.form .ui.checkbox input[type=checkbox]:checked ~ label:before {
+  background: #FFEBA0;
+  border-color: #F1F1F1;
+}
+.form__footer .button.button_type_primary.active,
+.form__footer .button.button_type_primary:hover {
+  color: #fff !important;
+}

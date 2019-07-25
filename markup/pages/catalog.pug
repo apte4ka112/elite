@@ -1,0 +1,178 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/pagination/pagination
+include ../components/banner/banner
+include ../components/headline/headline.pug
+include ../components/filter-sidebar/filter-sidebar
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page.page_catalog
+        | %=symbols=%
+        +header()
+        .main
+            +b.section
+                +e.box
+                    +b.head-conent
+                        .headline
+                            +breadcrumbs({elements: ['Главная', 'Каталог', 'Спальни']})
+                            .headline__header
+                                .headline__title ИТАЛЬЯНСКИЕ СПАЛЬНИ
+                    .iner-content
+                        .iner-content-level--2
+                            +b.catalog(data-sticky_parent)
+                                +e.box
+                                    +e.grid
+                                        +e.grid-filters
+                                            +e.grid-filter-row
+                                                +e.grid-filter_buttons
+                                                    +button({text:'Все стили',active: true})
+                                                    +button({text:'Классика'})
+                                                    +button({text:'Современный'})
+                                                +e.grid-filter_toggle
+                                                    +button({text: 'Композиции',active: true})
+                                                    +button({text: 'Предметы'})
+                                            +e.grid-filter-row
+                                                +button({text:'Показать фильтры',mod: 'mobile-filter'})
+                                        +e.grid-cards
+                                            .grid
+                                                - var n = 0
+                                                while n < 12
+                                                    +card({
+                                                        image: 'product_catalog.png',
+                                                        code: 'Композиция: 133-072',
+                                                        bubbles: true,
+                                                        name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                                        price: '234 567 ₽'
+                                                    })
+                                                    - n++;
+                                    
+                                    +e.filter
+                                        +b.filter
+                                            +e.header
+                                                +e.title Фильтр
+                                            +e.main
+                                                - var arSection = ['Раздел','Стиль','Фабрика','Свойства','Предмет'];
+                                                each section, sectionIndex in arSection
+                                                    +b.filter-section
+                                                        - var open = sectionIndex === 0 ? 'open' : '';
+                                                        +e.header(class=open)
+                                                            +e.header-text= section
+                                                            +e.header-arrow!= pugHelpers.Icon.call(locals, {iconName: 'filter-arrow'})
+                                                        +e.main
+                                                            - var arFilter = ['Спальни','Ванные комнаты','Гостиные','Детская мебель','Кабинеты','Кухни'];
+                                                            each item, index in arFilter
+                                                                +e.element
+                                                                    .ui.checkbox
+                                                                        input(type="radio" name="name4" )
+                                                                        label()= item
+                                                            +e.more.modal-full-link
+                                                                +e.more-btn Показать все
+                                                +e.item
+                                                    .ui.checkbox
+                                                        input(type="checkbox" name="НА СКЛАДЕ" id="checkbox_7_1")
+                                                        label(for="checkbox_7_1") НА СКЛАДЕ
+                                                +e.item
+                                                    .ui.checkbox
+                                                        input(type="checkbox" name="новинка" id="checkbox_7_2")
+                                                        label(for="checkbox_7_2")  НОВИНКА
+                                            +e.footer.card__btn 
+                                                +button({text: 'Очистить', type: 'primary', mod: 'card'})
+                                    
+                                        .banner--box(data-sticky_column)
+                                            +banner({
+                                                title: 'ИНТЕРЬЕРЫ ИТАЛИИ 12- <br>ТЕСТ,ТЕСТ',
+                                                remark: 'Кухни CESAR. <br>Официальный диллер'
+                                            })
+                                            +banner({
+                                                title: 'ИНТЕРЬЕРЫ ИТАЛИИ 12- <br>ТЕСТ,ТЕСТ',
+                                                remark: 'Кухни CESAR. <br>Официальный диллер'
+                                            })
+                        
+                        +b.catalog
+                            +e.box
+                                +e.grid
+                                    +e.grid-cards
+                                        .iner-content-level--2
+                                            +e.pagination.fixed_block_stop
+                                                    +pagination({})
+                                        +b.promo
+                                            +e.description
+                                                p Итальянская мебель для гостиной - это респектабельная продукция, которая остается актуальной даже спустя десятилетия. Она является стильным дополнением интерьера и способен подчеркнуть прекрасный вкус своего владельца. В нашем салоне в Москве представлена мебель для гостиных от ведущих итальянских фабрик: Marconcini Style, Camelgroup, Status и многих других.
+                                                p.more(id="more")   Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                                                a.read-more(href="more").link.read-more Читать полностью
+                                +e.filter
+                +filter-sidebar()
+                +footer({promo: true})
+                .ui.modal.scrolling.transition.modal-full
+                        i.modal__close.close
+                        .modal__header
+                            .modal__title Предмет
+                            .i.modal__close.close
+                        .content
+                            .ui.grid
+                                .three.column.row
+                                    .column
+                                        .ui.horizontal.list
+                                            .item.infilter
+                                                .middle.aligned.content
+                                                        .filter-section__element
+                                                            .ui.checkbox
+                                                                input(type="radio" name="frequency" id="")
+                                                                label() Кухни
+                                                        .filter-section__element
+                                                            .ui.checkbox
+                                                                input(type="radio" name="frequency" id="")
+                                                                label() Кухни
+                                                        .filter-section__element
+                                                            .ui.checkbox
+                                                                input(type="radio" name="frequency" id="")
+                                                                label Кухни
+                                    .column
+                                        .ui.horizontal.list
+                                            .item.infilter
+                                                .middle.aligned.content
+                                                        .filter-section__element
+                                                            .ui.checkbox
+                                                                input(type="radio" name="frequency" id="")
+                                                                label Кухни
+                                                        .filter-section__element
+                                                            .ui.checkbox
+                                                                input(type="radio" name="frequency" id="")
+                                                                label Кухни
+                                                        .filter-section__element
+                                                            .ui.checkbox
+                                                                input(type="radio" name="frequency" id="")
+                                                                label Кухни
+                                    .column
+                                        .ui.horizontal.list
+                                            .item.infilter
+                                                .middle.aligned.content
+                                                        .filter-section__element
+                                                            .ui.checkbox
+                                                                input(type="radio" name="frequency" id="")
+                                                                label Кухни
+                                                        .filter-section__element
+                                                            .ui.checkbox
+                                                                input(type="radio" name="frequency" id="")
+                                                                label Кухни
+                                                        .filter-section__element
+                                                            .ui.checkbox
+                                                                input(type="radio" name="frequency" id="")
+                                                                label Кухни
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

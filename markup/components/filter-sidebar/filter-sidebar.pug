@@ -1,0 +1,46 @@
+mixin filter-sidebar(data)
+    .filter-sidebar.ui.sidebar.left.vertical.inverted
+        +b.filter
+            +e.header
+                +e.title Фильтр
+            +b.catalog
+                +e.grid-filter_toggle
+                    +button({text: 'Композиции',active: true})
+                    +button({text: 'Предметы'})
+            +e.main
+                - var arSection = ['Раздел','Стиль','Фабрика','Свойства','Предмет'];
+                each section, sectionIndex in arSection
+                    +b.filter-section
+                        - var open = sectionIndex === 0 ? 'open' : '';
+                        +e.header(class=open)
+                            +e.header-text= section
+                            +e.header-arrow!= pugHelpers.Icon.call(locals, {iconName: 'filter-arrow'})
+                        +e.main
+                            - var arFilter = ['Спальни','Ванные комнаты','Гостиные','Детская мебель','Кабинеты','Кухни'];
+                            each item, index in arFilter
+                                +e.element
+                                    .ui.checkbox
+                                        input(type="radio" name="name4" )
+                                        label()= item
+                            +e.more
+                                +e.more-list
+                                    - var arFilter = ['Спальни','Ванные комнаты','Гостиные','Детская мебель','Кабинеты','Кухни'];
+                                    each item, index in arFilter
+                                        +e.element
+                                            .ui.checkbox
+                                                input(type="radio" name=item id="checkbox_more_" + sectionIndex + "_" + index)
+                                                label(for="checkbox_more_" + sectionIndex + "_" + index)= item
+                                +e.more-btn.modal-full-link Показать все
+                +e.item
+                    .ui.checkbox
+                        input(type="checkbox" name="НА СКЛАДЕ" id="checkbox_7_1")
+                        label(for="checkbox_7_1") НА СКЛАДЕ
+                +e.item
+                    .ui.checkbox
+                        input(type="checkbox" name="НА СКЛАДЕ" id="checkbox_7_2")
+                        label(for="checkbox_7_2") НОВИНКИ
+            +e.footer
+                +button({text: 'Показать', type: 'primary', mod: 'card'})
+            +e.footer
+                +button({text: 'Очистить', type: 'primary', mod: 'card'})
+            

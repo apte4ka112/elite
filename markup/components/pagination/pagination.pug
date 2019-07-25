@@ -1,0 +1,21 @@
+mixin pagination(params)
+    -
+        var name_block = 'pagination',
+        currentClass = name_block;
+        if('mod' in params && params.mod.length) currentClass =  name_block+'_'+params.mod;
+    +b.DIV(class= currentClass)
+        +e.A.control_prev(href='#') Назад
+        +e.OL.list
+            - var n = 2;
+            +e.LI.item
+                    +e.A.link.active(href='#')= 1
+            while n < 12
+                +e.LI.item
+                    +e.A.link(href='#')= n
+                - n++;
+            +e.LI.item
+                +e.A.link(href='#') ...
+            +e.LI.item
+                +e.A.link(href='#') 19
+        +e.A.control_next(href='#') Далее
+    +b.button.load-content Показать еще

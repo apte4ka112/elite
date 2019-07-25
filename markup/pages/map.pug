@@ -1,0 +1,232 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+include ../components/block-container/block-container
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/pagination/pagination
+include ../components/banner/banner
+include ../components/headline/headline.pug
+include ../components/filter-sidebar/filter-sidebar
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page
+        | %=symbols=%
+        +header()
+        .main
+            +b.section
+                +e.box
+                    +b.head-conent.inner
+                        +headline({text: 'Карта сайта'})
+                            +breadcrumbs({elements: ['Главная', 'Карта сайта']})
+                    +b.iner-content
+                        .block--item.grid.flex.item-2.tablet.plane
+                        <div id="container">
+                            ul.block--item.grid.flex.item-2.tablet.plane
+                                li.item.jstree-open Главная
+                                    ul.flex
+                                        <li class="item jstree-open mebel">Мебель
+                                            ul
+                                                li.jstree-open Раздел
+                                                    ul.bg-inner
+                                                        li гостиные
+                                                        li детская мебель
+                                                        li кабинеты
+                                                        li мягкая мебель
+                                                        li предметы интерьера
+                                                        li прихожие
+                                                        li спальни
+                                                        li стенки тв и стеллажи
+                                                        li столы и стулья
+                                                        li шкафы и гардеробы
+                                                li.bg-port Стили
+                                                    ul.bg-inner
+                                                        li xай-тек
+                                                        li ампир
+                                                        li арт-деко (ар деко)
+                                                        li арт-нуво (ар нуво)
+                                                        li барокко, рококо
+                                                        li винтаж
+                                                        li гламур
+                                                        li кантри
+                                                        li классика
+                                                        li лофт
+                                                        li минимализм
+                                                        li модерн
+                                                        li неоклассика
+                                                        li постмодерн, поп-арт
+                                                        li прованс
+                                                        li современный
+                                                        li фьюжен
+                                                        li эклектика
+                                                li.bg-port Предметы
+                                                    ul.bg-inner
+                                                        li база
+                                                        li база под раковину
+                                                        li балдахин
+                                                        li банкетка
+                                                        li бар
+                                                        li барная стойка
+                                                        li барный стул
+                                                        li библиотека
+                                                        li бильярд
+                                                        li буазери
+                                                        li буфет
+                                                        li бюро
+                                                        li ваза
+                                                        li вешалка
+                                                        li винный шкаф
+                                                        li витрина
+                                                        li витрина угловая
+                                                        li газетница
+                                                        li гардеробная
+                                                        li дверной портал
+                                                        li дверь межкомнатная
+                                                        li декоративная панель
+                                                        li диван
+                                                        li диван угловой
+                                                        li зеркало
+                                                        li зеркало напольное
+                                                        li игральный столик
+                                                        li канапе
+                                                        li картина
+                                                        li книжный шкаф
+                                                        li кованная кровать
+                                                        li комод
+                                                        li консоль
+                                                        li конференц стол
+                                                        li кофейный столик
+                                                        li кресло
+                                                        li кресло офисное
+                                                        li кресло руководителя
+                                                        li кроватка детская
+                                                        li кровать
+                                                        li кухня
+                                                        li кушетка
+                                                        li лампа
+                                                        li люлька
+                                                        li люстра
+                                                        li обувница
+                                                        li остров для кухни
+                                                        li оттоманка
+                                                        li панель для тв
+                                                        li подставка
+                                                        li полки
+                                                        li полукресло
+                                                        li пуф
+                                                        li ресепшн
+                                                        li сейф
+                                                        li секретер
+                                                        li сервант
+                                                        li сервировочный столик
+                                                        li скамья
+                                                        li стеллаж
+                                                        li стенка
+                                                        li стол
+                                                        li стол кухонный
+                                                        li стол обеденный
+                                                        li стол овальный
+                                                        li стол офисный
+                                                        li стол переговорный
+                                                        li стол письменный
+                                                        li стол руководителя
+                                                        li столик
+                                                        li столик журнальный
+                                                        li стул
+                                                        li сундук
+                                                        li табурет
+                                                        li торшер
+                                                        li трюмо
+                                                        li туалетный столик
+                                                        li тумба
+                                                        li тумба для тв
+                                                        li тумбочка офисная
+                                                        li тумбочка прикроватная
+                                                        li цветочница
+                                                        li часы напольные
+                                                        li шезлонг
+                                                        li ширма
+                                                        li шкаф
+                                                        li этажерка
+                                                li.bg-port Свойства
+                                                    ul.bg-inner
+                                                        li мдф
+                                                        li аворио
+                                                        li бежевый
+                                                        li белый
+                                                        li венге, мокко
+                                                        li зеленый
+                                                        li золото
+                                                        li инкрустация
+                                                        li кожа
+                                                        li корень дерева
+                                                        li коричневый
+                                                        li краска
+                                                        li красный
+                                                        li лак эмаль
+                                                        li ламинат
+                                                        li масив дерева
+                                                        li металл
+                                                        li натуральное дерево
+                                                        li орех
+                                                        li палисандр
+                                                        li патина
+                                                        li резьба
+                                                        li светлые оттенки дерева
+                                                        li серебро
+                                                        li синий
+                                                        li стекло
+                                                        li ткань
+                                                        li фольга
+                                                        li художественная роспись
+                                                        li черный
+                                                        li шпон
+                                                        li экокожа
+                                        </li>
+                                    ul
+                                         <li class="item jstree-open mebel">
+                                            ul
+                                                li Акции скидки
+                                                li Товары на складе
+                                                li фабрики
+                                                li Новинки
+                                                li Хиты
+
+                                                li О компании
+                                                li Контакты
+                                                li Как заказать
+                                                li Наши проекты
+                                                li Наши сотрудники
+                                                li Дизайн проект
+                                                li Фотогалерея
+                                    ul
+                                        <li class="item jstree-open mebel">
+                                            ul
+                                                <li>Доставка по Москве</li>
+                                                <li>Доставка по России</li>
+                                                <li>Оплата и цена</li>
+                                                <li>Оплата и достака</li>
+                                                <li>Статьи</li>
+                                                <li>Сотрудничество</li>
+                                                <li>Хранение</li>
+                                                <li>Монтаж</li>
+                                                <li>Реставрация</li>
+                                                <li>Вакансии</li>
+                                                <li>Новости</li>
+                                    
+                                
+                        </div>
+                +footer({promo: false})
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -1,0 +1,23 @@
+.rating {
+  display: flex;
+}
+.rating__star {
+  width: 16px;
+  height: 16px;
+  margin: 0 1px;
+  background-image: url('../img/assets/icon/star.svg');
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+.rating__star:hover {
+  background-image: url('../img/assets/icon/star-avtive.svg');
+}
+.rating__star.active {
+  background-image: url('../img/assets/icon/star-avtive.svg');
+}
+@media (max-width: 639px) {
+  .rating__star {
+    width: 18px;
+    height: 18px;
+  }
+}

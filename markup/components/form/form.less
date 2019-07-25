@@ -1,0 +1,111 @@
+.form {
+    text-align: center;
+    color: #ffffff;
+
+    &__header {
+
+    }
+
+    &__main {
+        margin-bottom: 18px;
+    }
+
+    &__title {
+        line-height: 36px;
+        font-size: 24px;
+        color: #ffffff;
+    }
+
+    &__description {
+        line-height: 18px;
+        font-size: 12px;
+        color: #ffffff;
+    }
+
+    &__input {
+        width: 100%;
+        height: 36px;
+        border-radius: 4px;
+        background: #fff;
+        border: 1px solid #DEDEDF;
+        margin-bottom: 12px;
+        padding: 0 5px 0 16px;
+        outline: none;
+        &.error{
+            border-color:red
+        }
+    }
+
+    &_footer {
+        color: #fff;
+
+        .form {
+            &__check {
+                label {
+                    color: #fff !important;
+                    text-align: left;
+                    font-size: 12px;
+                    font-weight: 300;
+                    letter-spacing:  normal;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: #fff;
+                    }
+
+                    a {
+                        font: inherit;
+                        color: inherit;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .button {
+            width: 100%;
+            color: #fff !important;
+            max-width: 180px;
+            height: 36px;
+        }
+    }
+
+    .ui.checkbox {
+        input[type=checkbox] {
+            width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            border-color: #E2E2E2;
+
+            & ~ label:before {
+                width: 16px;
+                height: 16px;
+                border-radius: 2px;
+                border-color: #E2E2E2;
+            }
+
+            & ~ label:after {
+                width: 16px;
+                height: 16px;
+                font-size: 10px;
+                color: #000000;
+            }
+
+            &:checked {
+                background: #FFEBA0;
+                border-color: #F1F1F1;
+
+                & ~ label:before {
+                    background: #FFEBA0;
+                    border-color: #F1F1F1;
+                }
+            }
+        }
+    }
+}
+.form__footer{
+    .button.button_type_primary.active, .button.button_type_primary:hover{
+        color: #fff !important;
+    }
+}

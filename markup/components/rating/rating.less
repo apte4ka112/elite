@@ -1,0 +1,27 @@
+
+.rating {
+    display: flex;
+
+    &__star {
+        width: 16px;
+        height: 16px;
+        margin: 0 1px;
+        background-image: url('../img/assets/icon/star.svg');
+        cursor: pointer;
+        background-repeat: no-repeat;
+
+        &:hover {
+            background-image: url('../img/assets/icon/star-avtive.svg');
+        }
+
+        &.active {
+            background-image: url('../img/assets/icon/star-avtive.svg');
+        }
+    }
+}
+@media (max-width: 639px) {
+    .rating__star{
+        width: 18px;
+        height: 18px;
+    }
+}

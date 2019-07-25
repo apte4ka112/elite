@@ -1,0 +1,330 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+include ../components/block-container/block-container
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/pagination/pagination
+include ../components/banner/banner
+include ../components/headline/headline.pug
+include ../components/filter-sidebar/filter-sidebar
+include ../components/footer/footer.pug
+
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page
+        | %=symbols=%
+        +header()
+        .main
+            +b.section
+                +e.box
+                    +b.head-conent.inner
+                        +headline({text: 'Фабрики'})
+                            +breadcrumbs({elements: ['Главная', 'Фабрики']})
+                    +b.iner-content
+                        
+                        .block-container.top(data-sticky_parent)
+                           
+                            .block-container__header.marBot25px.border.factories-head(data-sticky_column)
+                                .arrow
+                                    <svg width="1170" height="1" viewBox="0 0 1170 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="-4.37114e-08" y1="0.5" x2="1170" y2="0.499898" stroke="url(#paint0_linear)" stroke-opacity="0.54"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear" x1="0" y1="1" x2="1170" y2="0.999894" gradientUnits="userSpaceOnUse">
+                                                <stop stop-opacity="0"/>
+                                                <stop offset="0.5"/>
+                                                <stop offset="1" stop-opacity="0"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+
+                                +b.factories.head
+                                    +e.nav
+                                        .block-container__navigation.factories--link._course
+                                            
+                                        +e.item(rel="#tab1") A
+                                        +e.item(rel="#tab2") B
+                                        +e.item(rel="#tab3") C
+                                        +e.item(rel="#tab4") D
+                                        +e.item(rel="#tab5") E
+                                        +e.item(rel="#tab6") F
+                                        +e.item(rel="#tab7") G
+                                        +e.item(rel="#tab8") H
+                                        +e.item I
+                                        +e.item J
+                                        +e.item K
+                                        +e.item L
+                                        +e.item M
+                                        +e.item N
+                                        +e.item O
+                                        +e.item P
+                                        +e.item Q
+                                        +e.item R
+                                        +e.item S
+                                        +e.item T
+                                        +e.item U
+                                        +e.item V
+                                        +e.item Y
+                                        +e.item Z
+                                        .block-container__navigation-link.factories--link-open(href="/" ) Cмотреть все
+
+                                        
+                                .arrow.last
+                                    <svg width="1170" height="1" viewBox="0 0 1170 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="-4.37114e-08" y1="0.5" x2="1170" y2="0.499898" stroke="url(#paint0_linear)" stroke-opacity="0.54"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear" x1="0" y1="1" x2="1170" y2="0.999894" gradientUnits="userSpaceOnUse">
+                                                <stop stop-opacity="0"/>
+                                                <stop offset="0.5"/>
+                                                <stop offset="1" stop-opacity="0"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+
+                                
+                            .block-container__content
+                                +b.factories#tab1.f-tabs
+                                    +e.content
+                                        +e.title A
+                                        .ui.grid
+                                            .four.column.row
+                                                .column 
+                                                    +e.A.link(href="#") Adrenalina
+                                                    +e.A.link(href="#") Agm
+                                                    +e.A.link(href="#") Agostini
+                                                    +e.A.link(href="#") Alberta Salotti
+                                                    +e.A.link(href="#") Alf Da Fre
+                                                    +e.A.link(href="#") ALF Group
+                                                    +e.A.link(href="#") Alpuch
+                                                    +e.A.link(href="#") Alta
+                                                    +e.A.link(href="#") Alta Corte
+                                                .column 
+                                                    +e.A.link(href="#") Altamoda
+                                                    +e.A.link(href="#") Altavilla
+                                                    +e.A.link(href="#") Ameli Sedie
+                                                    +e.A.link(href="#") Amura
+                                                    +e.A.link(href="#") Andrea Fanfani
+                                                    +e.A.link(href="#") Angelo Cappellini
+                                                    +e.A.link(href="#") Angelo Reflex
+                                                    +e.A.link(href="#") Antares
+                                                    +e.A.link(href="#") Antonelli Moravio
+                                                .column
+                                                    +e.A.link(href="#") Ar Arredamenti
+                                                    +e.A.link(href="#") Ar-Tre
+                                                    +e.A.link(href="#") Arcari
+                                                    +e.A.link(href="#") Armobil
+                                                    +e.A.link(href="#") Armony
+                                                    +e.A.link(href="#") Arredo Classic
+                                                    +e.A.link(href="#") Arredo E Sofa
+                                                    +e.A.link(href="#") Arredo3
+                                                    +e.A.link(href="#") Arrital
+                                                .column 
+                                                    +e.A.link(href="#") Artex
+                                                    +e.A.link(href="#") Artigianmobili
+                                                    +e.A.link(href="#") Aryecla
+                                                    +e.A.link(href="#") Asnaghi
+                                                    +e.A.link(href="#") Asnaghi Interiors
+                                                    +e.A.link(href="#") Aster
+                                                    +e.A.link(href="#") Aurora
+                                +b.factories#tab2.f-tabs
+                                    +e.content
+                                        +e.title B
+                                        .ui.grid
+                                            .four.column.row
+                                                .column 
+                                                    +e.A.link(href="#") Bacci Stile
+                                                    +e.A.link(href="#") Bakokko
+                                                    +e.A.link(href="#") Bamar
+                                                    +e.A.link(href="#") Barnini Oseo
+                                                    +e.A.link(href="#") Bastex
+                                                    +e.A.link(href="#") Bastianelli Home
+                                                    +e.A.link(href="#") Baston Antonio
+                                                .column 
+                                                    +e.A.link(href="#") Bazzi
+                                                    +e.A.link(href="#") Bbelle
+                                                    +e.A.link(href="#") Bedding
+                                                    +e.A.link(href="#") Bello Sedie
+                                                    +e.A.link(href="#") Bernazzoli
+                                                    +e.A.link(href="#") Bianchini
+                                                    +e.A.link(href="#") Bitossi Luciano
+                                                .column
+                                                    +e.A.link(href="#") Bizzotto
+                                                    +e.A.link(href="#") Bm Style
+                                                    +e.A.link(href="#") Bmp
+                                                    +e.A.link(href="#") Bolzan
+                                                    +e.A.link(href="#") Bova
+                                                    +e.A.link(href="#") Bruma Salotti
+                                                    +e.A.link(href="#") Brummel Cucine
+                                                .column 
+                                                    +e.A.link(href="#") Bruno Piombini
+                                                    +e.A.link(href="#") Bruno Zampa
+                                                    +e.A.link(href="#") Busatto
+                                                    +e.A.link(href="#") Busnelli Adamo
+                                +b.factories#tab3.f-tabs
+
+                                    +e.content
+                                        +e.title C
+                                        .ui.grid
+                                            .four.column.row
+                                                .column 
+                                                   +e.A.link(href="#") Cafissi
+                                                    +e.A.link(href="#") Callesella
+                                                    +e.A.link(href="#") Camelgroup
+                                                    +e.A.link(href="#") Canta Luppi
+                                                    +e.A.link(href="#") Capital Collection
+                                                    +e.A.link(href="#") Cappelletti
+                                                    +e.A.link(href="#") Carlo Asnaghi
+                                                    +e.A.link(href="#") Caroti
+                                                .column 
+                                                    +e.A.link(href="#") Carpanese Home
+                                                    +e.A.link(href="#") Casa+39
+                                                    +e.A.link(href="#") Casaclassica
+                                                    +e.A.link(href="#") Caspani Tino
+                                                    +e.A.link(href="#") Castello
+                                                    +e.A.link(href="#") Catalano
+                                                    +e.A.link(href="#") Cattelan Italia
+                                                    +e.A.link(href="#") Cenedese
+                                                .column
+                                                    +e.A.link(href="#") Ceppi Style
+                                                    +e.A.link(href="#") Cesar
+                                                    +e.A.link(href="#") Chelini
+                                                    +e.A.link(href="#") Cis Salotti
+                                                    +e.A.link(href="#") Clever
+                                                    +e.A.link(href="#") Codutti
+                                                    +e.A.link(href="#") Coim
+                                                    +e.A.link(href="#") Coleart
+                                                .column 
+                                                    +e.A.link(href="#") Composit
+                                                    +e.A.link(href="#") Cortezari
+                                                    +e.A.link(href="#") Costantini Pietro
+                                                    +e.A.link(href="#") Covre Giulio
+                                                    +e.A.link(href="#") Cp Mobili
+                                +b.factories#tab4.f-tabs
+                                    +e.content
+                                        +e.title D
+                                        .ui.grid
+                                            .four.column.row
+                                                .column 
+                                                    +e.A.link(href="#") Dalcin
+                                                    +e.A.link(href="#") Dall Agnese
+                                                    +e.A.link(href="#") Dandy Home
+                                                    +e.A.link(href="#") Danti Divani
+                                                    +e.A.link(href="#") Dbf
+                                                
+                                                .column 
+                                                    +e.A.link(href="#") Delta Salotti
+                                                    +e.A.link(href="#") Dema
+                                                    +e.A.link(href="#") Devina Nais
+                                                    +e.A.link(href="#") Dina Tapizados
+                                                    +e.A.link(href="#") Ditre Italia
+                                                    
+                                                .column 
+                                                    +e.A.link(href="#") Dolfi
+                                                    +e.A.link(href="#") Domingo Salotti
+                                                    +e.A.link(href="#") Domus
+                                                    +e.A.link(href="#") Dv Home Collection
+                                                    +e.A.link(href="#") Dv Home
+                                                .column 
+                                                    +e.A.link(href="#") De Angeli
+                                                    +e.A.link(href="#") Del Tongo
+                                                    +e.A.link(href="#") Diva
+                                                    +e.A.link(href="#") Doimo Design
+                                +b.factories#tab5.f-tabs
+                                    +e.content
+                                        +e.title E
+                                        .ui.grid
+                                            .four.column.row
+                                                .column 
+                                                    +e.A.link(href="#") Ebanart
+                                                    +e.A.link(href="#") Ebanisteria Bacci
+                                                    +e.A.link(href="#") Edra
+                                                .column 
+                                                    +e.A.link(href="#") Egelasta
+                                                    +e.A.link(href="#") Ego
+                                                    +e.A.link(href="#") Elerico
+                                                .column 
+                                                    +e.A.link(href="#") Elledue
+                                                    +e.A.link(href="#") Emergroup
+                                                    +e.A.link(href="#") EPOQUE by EGON FURSTENВERG
+                                                .column 
+                                                    +e.A.link(href="#") Eurolegno
+                                                    +e.A.link(href="#") Exedra
+                                                    +e.A.link(href="#") Ezio Bellotti
+                                +b.factories#tab6.f-tabs
+                                    +e.content
+                                        +e.title F
+                                        .ui.grid
+                                            .four.column.row
+                                                .column
+                                                    +e.A.link(href="#") F-Design
+                                                    +e.A.link(href="#") Faber
+                                                    +e.A.link(href="#") Febal
+                                                    +e.A.link(href="#") Ferretti & Ferretti
+                                                .column 
+                                                    +e.A.link(href="#") Fimes
+                                                    +e.A.link(href="#") Florence Art
+                                                    +e.A.link(href="#") Florence Collections
+                                                    +e.A.link(href="#") Formerin
+                                                .column 
+                                                    +e.A.link(href="#") Formichi
+                                                    +e.A.link(href="#") Formitalia
+                                                    +e.A.link(href="#") Francesco Molon
+                                                    +e.A.link(href="#") Frari
+                                                .column 
+                                                    +e.A.link(href="#") Fratelli Pistolesi
+                                                    +e.A.link(href="#") Fratelli Radice
+                                                    +e.A.link(href="#") Frigerio
+                                                    +e.A.link(href="#") Frighetto
+                                +b.factories#tab7.f-tabs
+                                    +e.content
+                                        +e.title G
+                                        .ui.grid
+                                            .four.column.row
+                                                .column 
+                                                    +e.A.link(href="#") G&G Imbottitidesign
+                                                    +e.A.link(href="#") G&G Italia
+                                                    +e.A.link(href="#") Gaia
+                                                    +e.A.link(href="#") Galimberti Lino
+                                                    +e.A.link(href="#") Galimberti Nino
+                                                .column 
+                                                    +e.A.link(href="#") Gamamobel
+                                                    +e.A.link(href="#") Gamma
+                                                    +e.A.link(href="#") Gccolombo
+                                                    +e.A.link(href="#") Gicinque Cucine
+                                                    +e.A.link(href="#") Gimas
+                                                .column 
+                                                    +e.A.link(href="#") Giorgio Casa
+                                                    +e.A.link(href="#") Giorgio Collection
+                                                    +e.A.link(href="#") Giorgio Piotto
+                                                    +e.A.link(href="#") Giovannetti
+                                                    +e.A.link(href="#") Giusti Portos
+                                                .column 
+                                                    +e.A.link(href="#") Goldconfort
+                                                    +e.A.link(href="#") Granducato
+                                                    +e.A.link(href="#") Grilli
+                                                    +e.A.link(href="#") Guadarte
+                                                    +e.A.link(href="#") Gurian
+                                +b.factories#tab8.f-tabs
+                                    +e.content
+                                        +e.title H
+                                        .ui.grid
+                                            .four.column.row
+                                                .column 
+                                                    +e.A.link(href="#") Halley
+                                                 
+                                                .column 
+                                                    +e.A.link(href="#") Home Cucine 
+                                                  
+                                              
+                +footer({promo: true})
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

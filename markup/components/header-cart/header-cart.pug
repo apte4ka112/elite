@@ -1,0 +1,111 @@
+include ../button/button
+mixin header-cart(params)
+    
+    +b.header-cart
+        i.modal__close.close
+        +e.header
+            +e.SPAN.close Закрыть
+        +e.main
+            +b.cart-card
+                +e.item_close
+                    +e.close
+                +e.item_image
+                    .c-ratio._ratio-10
+                        .bg.cover(style="background-image: url(/static/img/assets/header-cart/product.jpg)")
+                +e.item_info
+                    +e.item_name
+                        span Мягкая мебель Gordon
+
+                    +e.item_code
+                        +e.item-property Коллекция
+                        +e.item-value 102-183
+                    +e.item_price
+                        +e.item-property Стоимость
+                        +e.item-value по запросу
+            +b.cart-card
+                +e.item_close
+                    +e.close
+                +e.item_image
+                    .c-ratio._ratio-10
+                        .bg.cover(style="background-image: url(/static/img/assets/header-cart/product.jpg)")
+                +e.item_info
+                    +e.item_name
+                        span Мягкая мебель Gordon
+                        +e.item-property Артикул:
+                        +e.item-value 113-223
+                    +e.item_code
+                        +e.item-property Модель
+                        +e.item-value 113-223
+                    +e.item_price
+                        +e.item-property Стоимость
+                        .composition__price
+                            .price от 12 000 ₽
+                            .text.s-18  от 262 475 ₽
+            +b.cart-card
+                +e.item_close
+                    +e.close
+                +e.item_image
+                    .c-ratio._ratio-10
+                        .bg.cover(style="background-image: url(/static/img/assets/header-cart/product.jpg)")
+                +e.item_info
+                    +e.item_name
+                        span Мягкая мебель Gordon
+                        +e.item-property Артикул:
+                        +e.item-value 113-223
+                    +e.item_code
+                        +e.item-property Модель
+                        +e.item-value 113-223
+                    +e.item_price
+                        +e.item-property Стоимость
+                        .composition__price
+                            .price от 12 000 ₽
+                            .text.s-18  от 262 475 ₽
+            +b.cart-card
+                +e.item_close
+                    +e.close
+                +e.item_image
+                    .c-ratio._ratio-10
+                        .bg.cover(style="background-image: url(/static/img/assets/header-cart/product.jpg)")
+                +e.item_info
+                    +e.item_name
+                        span Мягкая мебель Gordon
+                        +e.item-property Артикул:
+                        +e.item-value 113-223
+                    +e.item_code
+                        +e.item-property Модель
+                        +e.item-value 113-223
+                    +e.item_price
+                        +e.item-property Стоимость
+                        .composition__price
+                            .price от 12 000 ₽
+                            .text.s-18  от 262 475 ₽
+            +b.cart-card
+                +e.item_close
+                    +e.close
+                +e.item_image
+                    .c-ratio._ratio-10
+                        .bg.cover(style="background-image: url(/static/img/assets/header-cart/product.jpg)")
+                +e.item_info
+                    +e.item_name
+                        span Мягкая мебель Gordon
+                        +e.item-property Артикул:
+                        +e.item-value 113-223
+                    +e.item_code
+                        +e.item-property Модель
+                        +e.item-value 113-223
+                    +e.item_price
+                        +e.item-property Стоимость
+                        .composition__price
+                            .price от 12 000 ₽
+                            .text.s-18  от 262 475 ₽
+        +e.bottom
+            +button({text: 'Перейти к заказу', type: 'primary', mod: 'header-cart'})
+            +e.currency
+                +e.P.currency-text Отображать цены
+                +e.currency-list
+                    .ui.basic.icon.button.active
+                        i.ruble.icon
+                    .ui.basic.icon.button
+                        i.euro.icon
+                    .ui.basic.icon.button
+                        i.dollar.icon

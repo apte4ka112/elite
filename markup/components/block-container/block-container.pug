@@ -1,0 +1,22 @@
+include ../button-group/button-group
+mixin block-container(params)
+    -
+        var name_block = 'block-container',
+        currentClass = name_block;
+        if('mod' in params && params.mod.length) currentClass =  name_block+'_'+params.mod;
+    +b.DIV(class= currentClass)
+        +e.header
+            if(params.title)
+                +e.H2.title= params.title
+            +e.navigation
+                if(params.headerButtons)
+                    -
+                        for(var i = 0; i < params.headerButtons.length; i++) params.headerButtons[i]['mod'] = 'nav';
+                    +button-group({
+                        mod: 'navigation',
+                        elements: params.headerButtons
+                    })
+                if(params.headerLink)
+                    +e.A.navigation-link(href=params.headerLink.href)= params.headerLink.name
+        +e.content
+            block

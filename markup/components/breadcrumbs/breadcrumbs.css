@@ -1,0 +1,74 @@
+.breadcrumbs__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbs__link {
+  position: relative;
+}
+.breadcrumbs__link:hover {
+  color: #c87065;
+}
+.breadcrumbs__link:hover::before {
+  content: '';
+  width: 100%;
+  background: #bbb4b0;
+  height: 1px;
+  position: absolute;
+  bottom: -5px;
+}
+.breadcrumbs__item {
+  position: relative;
+  line-height: 12px;
+  font-size: 11px;
+  opacity: 0.7;
+  transition: all .4s;
+}
+@media (max-width: 1119px) {
+  .breadcrumbs__item {
+    font-size: 11px;
+  }
+}
+@media (max-width: 1119px) {
+  .breadcrumbs__item {
+    font-size: 9px;
+  }
+}
+.breadcrumbs__item:hover {
+  opacity: 1;
+}
+.breadcrumbs__item.active {
+  position: relative;
+}
+.breadcrumbs__item.active::before {
+  content: '';
+  width: 100%;
+  background: #bbb4b0;
+  height: 1px;
+  position: absolute;
+  bottom: -5px;
+}
+.breadcrumbs__item:not(:last-of-type) {
+  padding-right: 34px;
+}
+.breadcrumbs__item:not(:last-of-type):after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 14px;
+  background: url("../img/assets/breadcrumbs/arrow.svg") center / cover no-repeat;
+  right: 13px;
+  top: -1px;
+}
+.breadcrumbs__item strong {
+  font: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 160px;
+  display: block;
+}

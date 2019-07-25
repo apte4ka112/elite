@@ -1,0 +1,652 @@
+include ../components/libs/bemto/bemto
+include ../components/libs/jade-injected/jade-injected
+
+include ../components/head/head.pug
+include ../components/header/header
+include ../components/icon/icon
+include ../components/social/social
+include ../components/slider/slider
+include ../components/block-container/block-container
+include ../components/grid-categories/grid-categories
+include ../components/entry/entry
+include ../components/footer/footer.pug
+include ../components/pagination/pagination
+include ../components/breadcrumbs/breadcrumbs
+include ../components/form/form
+include ../components/headline/headline
+include ../components/product/product
+doctype html
+html(class="no-js", lang="ru")
+    head
+        +head({
+            title: 'Интернет магазин Итальянской мебели в Москве'
+        })
+    body.page(style="background:#F1F1F1")
+        | %=symbols=%
+        +header()
+        .main
+            +b.section.section_while.section_border
+                +e.box
+                    +b.head-conent
+                        +b.headline
+                            +breadcrumbs({elements: ['Главная', 'Каталог', 'Кравать']})
+                            +e.header
+                                +e.title.product--header Кравать ФАБРИКИ PRAMA 
+                                +e.nav
+                                    +b.product
+                                        +e.link--container
+                                            +e.share
+                                                +e.share--text Поделиться
+                                                +e.A.share--item(href="#")
+                                                    .vk
+                                                        
+                                                +e.A.share--item(href="#")
+                                                    .fb
+                                                +e.A.share--item(href="#")
+                                                    .tw
+                                                +e.A.share--item(href="#")
+                                                    .in
+                                                        
+                    +b.product.flex.top
+                        +e.col._size_6
+                            +b.slider._type_product
+                                +e.list--full
+                                    +e.main.owl-carousel.owl-theme.sync1(rel="swiper")
+                                        .item
+                                            +e.main--item
+                                                    a(href="https://cdn.elite-moscow.ru/upload/iblock/e29/e292ac85d45015fea0359a8365143f73.jpg" data-sub-html="Кровати фабрики Cattelan Italia").src.c-ratio._ratio-10
+                                                        .ik.zoom
+                                                            i.search.icon
+                                                        .bg.contain(style="background-image: url('https://cdn.elite-moscow.ru/upload/iblock/e29/e292ac85d45015fea0359a8365143f73.jpg')" )
+                                                        img(src="https://cdn.elite-moscow.ru/upload/iblock/e29/e292ac85d45015fea0359a8365143f73.jpg" )
+                                                    .bubbles
+                                                        .bubbles--r
+                                                            .bubble.bubble_discount -10%
+                                        .item
+                                            +e.main--item
+                                                    
+                                                    a(href="https://www.elite-moscow.ru/upload/iblock/9cd/9cd4492c0ab403e6335eea203eedcbc9.jpg" data-sub-html="Кровати фабрики Cattelan Italia").src.c-ratio._ratio-10
+                                                        .ik.zoom
+                                                            i.search.icon
+                                                        .bg.contain(style="background-image: url('https://www.elite-moscow.ru/upload/iblock/9cd/9cd4492c0ab403e6335eea203eedcbc9.jpg')" )
+                                                        img(src="https://www.elite-moscow.ru/upload/iblock/9cd/9cd4492c0ab403e6335eea203eedcbc9.jpg")
+                                                    .bubbles
+                                                        .bubbles--r
+                                                            .bubble.bubble_discount -10%
+                                            
+                                        .item
+                                            +e.main--item
+                                                    a(href="https://www.elite-moscow.ru/upload/iblock/467/467aecebd7dcb064dcb3deec2e53efb8.jpg" data-sub-html="Кровати фабрики Cattelan Italia").src.c-ratio._ratio-10
+                                                        .ik.zoom
+                                                            i.search.icon
+                                                        .bg.contain(style="background-image: url('https://www.elite-moscow.ru/upload/iblock/467/467aecebd7dcb064dcb3deec2e53efb8.jpg')" )
+                                                        img(src="https://www.elite-moscow.ru/upload/iblock/467/467aecebd7dcb064dcb3deec2e53efb8.jpg")
+                                                    .bubbles
+                                                        .bubbles--r
+                                                            .bubble.bubble_discount -10%
+                                        .item
+                                            +e.main--item
+                                                    a(href="https://dev.elite-moscow.ru/upload/iblock/11c/11c79add835ebeebdbedfb61270da044.jpg" data-sub-html="Кровати фабрики Cattelan Italia").src.c-ratio._ratio-10
+                                                        .ik.zoom
+                                                            i.search.icon
+                                                        .bg.contain(style="background-image: url('https://dev.elite-moscow.ru/upload/iblock/11c/11c79add835ebeebdbedfb61270da044.jpg')" )
+                                                        img(src="https://dev.elite-moscow.ru/upload/iblock/11c/11c79add835ebeebdbedfb61270da044.jpg")
+                                                    .bubbles
+                                                        .bubbles--r
+                                                            .bubble.bubble_discount -10%
+                                        .item
+                                            +e.main--item
+                                                    a(href="https://dev.elite-moscow.ru/upload/iblock/790/790b40e29c6457ccba909e1da5478c13.jpg" data-sub-html="Кровати фабрики Cattelan Italia").src.c-ratio._ratio-10
+                                                        .ik.zoom
+                                                            i.search.icon
+                                                        .bg.contain(style="background-image: url('https://dev.elite-moscow.ru/upload/iblock/790/790b40e29c6457ccba909e1da5478c13.jpg')" )
+                                                        img(src="https://dev.elite-moscow.ru/upload/iblock/790/790b40e29c6457ccba909e1da5478c13.jpg")
+                                                    .bubbles
+                                                        .bubbles--r
+                                                            .bubble.bubble_discount -10%
+                                        .item
+                                            +e.main--item
+                                                    a(href="https://dev.elite-moscow.ru/upload/iblock/e33/e3317a6f3d6cf9428a214c5fe8ef3bd9.jpg" data-sub-html="Кровати фабрики Cattelan Italia").src.c-ratio._ratio-10
+                                                        .ik.zoom
+                                                            i.search.icon
+                                                        .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/iblock/e33/e3317a6f3d6cf9428a214c5fe8ef3bd9.jpg')" )
+                                                        img(src="https://dev.elite-moscow.ru/upload/iblock/e33/e3317a6f3d6cf9428a214c5fe8ef3bd9.jpg")
+
+                                                    .bubbles
+                                                        .bubbles--r
+                                                            .bubble.bubble_discount -10%
+                                            //- +e.A.share(href="#")
+                                            //-     +b.icon._type_fire
+                                            //-     +e.SPAN.share--text Скидка до 60% на кровати в цвете орех
+                                    +e.min.owl-carousel.owl-theme#sync2
+                                        +e.min--item
+                                            .c-ratio._ratio-100
+                                                .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg')"  )
+                                            img(src="https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg" , alt="")
+                                        +e.min--item
+                                            .c-ratio._ratio-100
+                                                .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg')"  )
+                                            img(src="https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg" , alt="")
+                                        +e.min--item
+                                            .c-ratio._ratio-100
+                                                .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg')"  )
+                                            img(src="https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg" , alt="")
+                                        +e.min--item
+                                            .c-ratio._ratio-100
+                                                .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg')"  )
+                                            img(src="https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg" , alt="")
+                                        +e.min--item
+                                            .c-ratio._ratio-100
+                                                .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg')"  )
+                                            img(src="https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg" , alt="")
+                                        +e.min--item
+                                            .c-ratio._ratio-100
+                                                .bg.cover(style="background-image: url('https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg')"  )
+                                            img(src="https://dev.elite-moscow.ru/upload/resize_cache/iblock/362/200_200_2/3626f782c0c23dbe171ec34946c33634.jpg" , alt="")
+                        +e.mobille--info.m
+                            
+                            div.col
+                                .price
+                                    .product__info--content
+                                        .product__info--head Цена за товар:
+                                        div
+                                            .product__info--price
+                                                | от
+                                                b 25 854 ₽
+                                            .product__info--price_small.share от  25 854 ₽
+                                            .product__info--price_small.share.num Скидка 10%
+                                    
+                            div.col
+                                .course--info
+                                    .product__info--head ОТОБРАЖАТЬ ЦЕНЫ
+                                    .product__info--content
+                                        +b.course.product__info--course
+                                            +e.item.active
+                                                i.ruble.icon
+                                            +e.item
+                                                i.euro.icon
+                    
+                                            +e.item
+                                                i.dollar.icon
+                                .rating
+                                    .product__info--head Рейтинг товара
+                                    .product__info--content
+                                        +b.rating.product__info--rating
+                                            +e.star.active
+                                            +e.star.active
+                                            +e.star.active
+                                            +e.star
+                                            +e.star
+                                    a.product__info--link.feedback--link(href="#") Написать отзыв
+                            
+                            .product__info--button.tovar--link
+                                +button({
+                                    text: 'в корзину',
+                                    type: 'primary',
+                                    link: '#'
+                                })
+                            .product__info--button.request--link
+                                +button({
+                                    text: 'Отправить запрос',
+                                    type: 'primary',
+                                    link: '#'
+                                })
+                        +e.col._size_6.flex.mobile
+                            +e.col._size_6.hide
+                                .product__info._main
+                                    .product__info--head Характеристики
+                                    .product__info--content
+                                        .product__info--item
+                                            b Модель:
+                                            span.product__info--text  139-342
+                                        .product__info--item
+                                            b Композиция:
+                                            span.product__info--text 
+                                                a(href="#").doneModalLink 139-341
+                                        .product__info--item
+                                            b Фабрика:
+                                            span.product__info--text Prama
+                                        .product__info--item
+                                            b Стиль:
+                                            span.product__info--text Современный
+                                        .product__info--item
+                                            b Страна:
+                                            span.product__info--text Италия
+                                        .product__info--item
+                                            b Материал:
+                                            span.product__info--text кожа, масив , дерева, экокожа, шпон, ткань
+                                        .product__info--item
+                                            b Размер:
+                                            span.product__info--text 1000x1000x1000 
+                                        .product__info--item
+                                            b Товар:
+                                            span.product__info--text под заказ
+                                        .product__info--item
+                                            b Срок поставки:
+                                            span.product__info--text 30 дней
+                                .product__info._padding-false
+                                    .product__info--head Рейтинг товара
+                                    .product__info--content
+                                        div
+                                            +b.rating.product__info--rating
+                                                +e.star.active
+                                                +e.star.active
+                                                +e.star.active
+                                                +e.star
+                                                +e.star
+                                            a.product__info--link.feedback--link(href="#") Написать отзыв
+
+                            +e.col._size_6
+                                .product__info._main
+                                    .product__info--head!=('Цена за товар') 
+                                    .product__info--content
+                                        div
+                                            .product__info--price
+                                                | от
+                                                b 25 854 ₽
+                                            .product__info--price_small.share от  25 854 ₽
+                                            .product__info--price_small.share.num Скидка 10%
+                                        div
+                                            .product__info--button.tovar--link
+                                                +button({
+                                                    text: 'в корзину',
+                                                    type: 'primary',
+                                                    link: '#'
+                                                })
+                                            .product__info--button.request--link
+                                                +button({
+                                                    text: 'Отправить запрос',
+                                                    type: 'primary',
+                                                    link: '#'
+                                                })
+                                .product__info._padding-false
+                                    .product__info--head ОТОБРАЖАТЬ ЦЕНЫ
+                                    .product__info--content
+                                        +b.course.product__info--course
+                                            +e.item.active
+                                                i.ruble.icon
+                                            +e.item
+                                                i.euro.icon
+                    
+                                            +e.item
+                                                i.dollar.icon
+                    .property--mobile.product
+                        .product__info._main
+                            .product__info--head Характеристики
+                            .product__info--content
+                                .item
+                                    .product__info--item
+                                        b Композиция:
+                                        span.product__info--text 139-342
+                                    .product__info--item
+                                        b Фабрика:
+                                        span.product__info--text Prama
+                                    .product__info--item
+                                        b Цвет:
+                                        span.product__info--text Красный 
+                                    .product__info--item
+                                        b Материал:
+                                        span.product__info--text кожа, масив , дерева, экокожа, шпон, ткань
+                                    .product__info--item
+                                        b Срок поставки:
+                                        span.product__info--text 30 дней
+                                .item
+                                    .product__info--item
+                                        b Стиль:
+                                        span.product__info--text Современный
+                                    
+                                    .product__info--item
+                                        b Страна:
+                                        span.product__info--text Италия
+                                    
+                                    .product__info--item
+                                        b Товар:
+                                        span.product__info--text под заказ
+                        .product__info._padding-false
+                            .product__info--head Рейтинг товара
+
+                            .product__info--content
+                                div
+                                    +b.rating.product__info--rating
+                                        +e.star.active
+                                        +e.star.active
+                                        +e.star.active
+                                        +e.star
+                                        +e.star
+                                    a.product__info--link.feedback--link(href="#") Написать отзыв
+                    .tabs.tabs_poduct
+                        .tabs__nav
+                            a.tabs__item.active(data-tab='one') Описание товара
+                               
+                            a.tabs__item(data-tab='two') отзывы
+                                
+                            a.tabs__item(data-tab='three' ) доставка
+                                
+                            a.tabs__item(data-tab='four' ) оплата
+                                
+                            a.tabs__item(data-tab='five' ) гарантии продавца
+                               
+                        .tabs__content
+                            a.tabs__item.tabs__item_acr.active( rel="tab1" href='#tab1')
+                                span Описание товара
+                                
+                            .ui.tab.active(data-tab='one' id="tab1") 
+                                p Фабрика итальянской мебели Mario Villanova занимается производством мебели в классическом стиле и стиле модерн с 1953 года. Компания постоянно расширяет ассортимент производимой мебели, предлагает потребителям новые коллекции и отличается разнообразием дизайна. Однако вся продукция Villanova отличается высочайшим качеством. Несмотря на приверженность к классическому стилю итальянская фабрика Villanova не выглядит старомодной. Продукция отвечает всем современным стандартам и требованиям, которые предъявляются к мировым производителям к качественной и стильной мебели.
+                                p.more(id="more" style="display:none")  Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                                a.read-more.link.read-more(href="more") Читать полностью
+                            a.tabs__item.tabs__item_acr( rel="tab2"  href='#tab2')
+                                span отзывы
+                                
+                            .ui.tab(data-tab='two' id="tab2")
+                                +b.comments
+                                    +e.wrap
+                                        +e.avatar
+                                            img(src="../static/img/assets/catalog/avatar.png", alt="")
+                                        +e.content
+                                            +e.header
+                                                +e.name Виолетта Крылова
+                                                +e.info
+                                                    +e.info--city г. москва
+                                                    +e.info--date 31 авг 2018
+                                            +e.message Чернова И.К., Гарибян Л.Р., Галушко А.В.-высококлассные профессионалы, каких в Московских клиниках не найдешь (мне есть , с чем сравнить...). Терпеливые, внимательные, скурпулезные. Не боятся принять, порой. нестандартные решения.
+                                +b.comments
+                                    +e.wrap
+                                        +e.avatar
+                                            img(src="../static/img/assets/catalog/avatar.png", alt="")
+                                        +e.content
+                                            +e.header
+                                                +e.name Виолетта Крылова
+                                                +e.info
+                                                    +e.info--city г. москва
+                                                    +e.info--date 31 авг 2018
+                                            +e.message Чернова И.К., Гарибян Л.Р., Галушко А.В.-высококлассные профессионалы, каких в Московских клиниках не найдешь (мне есть , с чем сравнить...). Терпеливые, внимательные, скурпулезные. Не боятся принять, порой. нестандартные решения
+                                +b.comments
+                                    +e.wrap
+                                        +e.avatar
+                                            img(src="../static/img/assets/catalog/avatar.png", alt="")
+                                        +e.content
+                                            +e.header
+                                                +e.name Виолетта Крылова
+                                                +e.info
+                                                    +e.info--city г. москва
+                                                    +e.info--date 31 авг 2018
+                                            +e.message Чернова И.К., Гарибян Л.Р., Галушко А.В.-высококлассные профессионалы, каких в Московских клиниках не найдешь (мне есть , с чем сравнить...). Терпеливые, внимательные, скурпулезные. Не боятся принять, порой. нестандартные решения.
+                                +b.comments
+                                    +e.wrap
+                                        +e.avatar
+                                            img(src="../static/img/assets/catalog/avatar.png", alt="")
+                                        +e.content
+                                            +e.header
+                                                +e.name Виолетта Крылова
+                                                +e.info
+                                                    +e.info--city г. москва
+                                                    +e.info--date 31 авг 2018
+                                            +e.message Чернова И.К., Гарибян Л.Р., Галушко А.В.-высококлассные профессионалы, каких в Московских клиниках не найдешь (мне есть , с чем сравнить...). Терпеливые, внимательные, скурпулезные. Не боятся принять, порой. нестандартные решения.
+                                +b.comments
+                                    +e.wrap
+                                        +e.avatar
+                                            img(src="../static/img/assets/catalog/avatar.png", alt="")
+                                        +e.content
+                                            +e.header
+                                                +e.name Виолетта Крылова
+                                                +e.info
+                                                    +e.info--city г. москва
+                                                    +e.info--date 31 авг 2018
+                                            +e.message Чернова И.К., Гарибян Л.Р., Галушко А.В.-высококлассные профессионалы, каких в Московских клиниках не найдешь (мне есть , с чем сравнить...). Терпеливые, внимательные, скурпулезные. Не боятся принять, порой. нестандартные решения.
+                                .catalog__pagination.fixed_block_stop
+                                    +pagination({})
+                                
+                            a.tabs__item.tabs__item_acr( rel="tab3"  href='#tab3')
+                                span доставка
+                                
+                            .ui.tab(data-tab='three' id="tab3")
+                                p Фабрика итальянской мебели Mario Villanova занимается производством мебели в классическом стиле и стиле модерн с 1953 года. Компания постоянно расширяет ассортимент производимой мебели, предлагает потребителям новые коллекции и отличается разнообразием дизайна. Однако вся продукция Villanova отличается высочайшим качеством. Несмотря на приверженность к классическому стилю итальянская фабрика Villanova не выглядит старомодной. Продукция отвечает всем современным стандартам и требованиям, которые предъявляются к мировым производителям к качественной и стильной мебели.
+                                p.more(id="more" style="display:none")  Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                                a.read-more.link.read-more(href="more") Читать полностью
+                            a.tabs__item.tabs__item_acr( rel="tab4"  href='#tab4')
+                                span оплата
+                             
+                            .ui.tab(data-tab='four' id="tab4" )
+                                p Фабрика итальянской мебели Mario Villanova занимается производством мебели в классическом стиле и стиле модерн с 1953 года. Компания постоянно расширяет ассортимент производимой мебели, предлагает потребителям новые коллекции и отличается разнообразием дизайна. Однако вся продукция Villanova отличается высочайшим качеством. Несмотря на приверженность к классическому стилю итальянская фабрика Villanova не выглядит старомодной. Продукция отвечает всем современным стандартам и требованиям, которые предъявляются к мировым производителям к качественной и стильной мебели.
+                                p.more(id="more" style="display:none")  Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                                a.read-more.link.read-more(href="more") Читать полностью
+                            a.tabs__item.tabs__item_acr( rel="tab5" href='#tab5').border
+                                span гарантии продавца
+                                
+                            .ui.tab(data-tab='five' id="tab5").border
+                                p Фабрика итальянской мебели Mario Villanova занимается производством мебели в классическом стиле и стиле модерн с 1953 года. Компания постоянно расширяет ассортимент производимой мебели, предлагает потребителям новые коллекции и отличается разнообразием дизайна. Однако вся продукция Villanova отличается высочайшим качеством. Несмотря на приверженность к классическому стилю итальянская фабрика Villanova не выглядит старомодной. Продукция отвечает всем современным стандартам и требованиям, которые предъявляются к мировым производителям к качественной и стильной мебели.
+                                p.more(id="more" style="display:none")  Вот уже много веков Италия является крупнейшим в мире производителем элитной мебели, лидером сегмента мебели премиум-класса, родоначальником различных направлений мебельного искусства, законодателем моды и инновационного дизайна.
+                                a.read-more.link.read-more(href="more") Читать полностью
+                    
+            +b.section._card._while._border
+                +e.box
+                    +block-container({
+                        title: 'ВСЕ ТОВАРЫ ФАБРИКИ PRAMA',
+                        headerButtons: [
+                            {
+                                text: 'Все стили',
+                                active: true,
+                                data: {
+                                    'data-tab': 'all'
+                                }
+                            },
+                            {
+                                text: 'Классика',
+                                data: {
+                                    'data-tab': 'classic'
+                                }
+                            },
+                            {
+                                text: 'Современный',
+                                data: {
+                                    'data-tab': 'modern'
+                                }
+                            }
+                        ]
+                    })
+                        +slider({
+                            type: 'card',
+                            elements: [
+                                {
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    label: 'Новинка',
+                                    label_mod: 'blue',
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    prices: 'по запросу',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    label: 'Новинка',
+                                    label_mod: 'blue',
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    prices: 'по запросу',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    label: 'Новинка',
+                                    label_mod: 'blue',
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    prices: 'по запросу',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    label: 'Новинка',
+                                    label_mod: 'blue',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    prices: 'по запросу',
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    label: 'Новинка',
+                                    label_mod: 'blue',
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: 'от 234 567 ₽',
+                                    availab: 'В наличии'
+                                }
+                            ]
+                        })
+            +b.section._card._while.bottom._border
+                +e.box
+                    +block-container({
+                        title: 'похожие модели'
+                    })
+                        +slider({
+                            type: 'card',
+                            elements: [
+                                {
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: '234 567 ₽',
+                                    bubbles: true,
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: '234 567 ₽',
+                                    bubbles: true,
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: '234 567 ₽',
+                                    bubbles: true,
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: '234 567 ₽',
+                                    bubbles: true,
+                                    availab: 'В наличии'
+                                },
+                                {
+                                    image: 'product.jpg',
+                                    stars: true,
+                                    code: 'Композиция: 133-072',
+                                    name: 'Журнальные столики и пуфы коллекции Philipp фабрики Selva',
+                                    price: '234 567 ₽',
+                                    bubbles: true,
+                                    availab: 'В наличии'
+                                }
+                            ]
+                        })
+            
+            div.product--modal
+                #top-left.product-container
+                    .description__header
+                        .description__title Модель:
+                        .description__text 139-449
+                    .request--link
+                        +button({
+                            text: 'ОТПРАВИТЬ ЗАПРОС',
+                            type: 'primary',
+                            link: '#'
+                        })
+                    +button({
+                        text: 'КУПИТЬ',
+                        type: 'primary',
+                        link: '#'
+                    })
+                #top-right.product-container
+                    .description.item(data-position="bottom right")
+                        +button({
+                            text: 'ПОДРОБНЕЕ',
+                            type: 'primary',
+                            link: '#'
+                        })
+            +b.description.popup.ui
+                i.modal__close.close
+                .description__head
+                    .description__name Кровати фабрики longhi
+                    .description__header
+                        .description__text Модель: 139-449
+                .description__main
+                    .description__item
+                        .description__header
+                            .description__title Композиция:
+                            .description__text 139-449
+                    .description__item
+                        .description__header
+                            .description__title Фабрика:
+                            .description__text Longhi
+                    .description__item
+                        .description__header
+                            .description__title Старана:
+                            .description__text Италия
+                    .description__item
+                        .description__header
+                            .description__title Стиль:
+                            .description__text Современный, Неоклассика
+                    .description__item
+                        .description__header
+                            .description__title Артикул:
+                            .description__text -
+                    .description__item
+                        .description__header
+                            .description__title Размер:
+                            .description__text L:225/204/164 P:240 H:142
+                    .description__item
+                        .description__header
+                            .description__title Товар:
+                            .description__text Под заказ
+                    .description__price
+                        .description__item
+                            .description__header
+                                .description__title Стоимоcть:
+                                .description__text По запросу
+                        .description__item
+                            .description__header
+                                .description__text.smail  Отображать цены
+                                .description__text 
+                                    +b.course.product__info--course
+                                        +e.item.active
+                                            i.ruble.icon
+                                        +e.item
+                                            i.euro.icon
+                                        +e.item
+                                            i.dollar.icon
+
+                    .description__header.no-flex
+                            .description__title Описание:
+                            .description__image--wrap
+                                p Фабрика итальянской мебели Mario Villanova занимается производством мебели в классическом стиле и 
+            .ui.modal.modal_theme_order.doneModal
+                        i.modal__close.close
+                        .s-modal--header.center
+                            .s-modal--text Вы хотите перейти на 
+                                br
+                                |страницу выбранной композиции ?
+                            .s-modal--button Да
+                            .s-modal--button.clearHide Нет
+            
+            +footer({promo: true})
+            
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
